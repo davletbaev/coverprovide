@@ -13,6 +13,14 @@ function serve() {
     browsersync.reload()
     done()
   }))
+  gulp.watch(paths.watch.images, gulp.series('images', function UpdatingPage(done) {
+    browsersync.reload()
+    done()
+  }))
+  gulp.watch(paths.watch.fonts, gulp.series('fonts', function UpdatingPage(done) {
+    browsersync.reload()
+    done()
+  }))
 }
 
 module.exports = serve
