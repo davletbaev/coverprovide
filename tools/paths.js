@@ -1,6 +1,6 @@
 const paths = {
   src: {
-    html: 'src/html/[^_]*.html',
+    html: 'src/html/**/[^_]*.html',
     css: 'src/sass/styles.scss',
     js: 'src/js/*.js',
     images: 'src/img/**/*.[jpg|jpeg|png|svg]',
