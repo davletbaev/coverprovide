@@ -1,0 +1,26 @@
+{% macro field(label, type="text", name, placeholder, icon, isRequired=false, isDisabled=false, size="md") %}
+  <label class="control control--{{size}}">
+    {% if label %}
+      <span class="control__label">{{ label }}</span>
+    {% endif %}
+
+    <span class="control__wrapper">
+      {% if icon %}
+        <span class="control__icon">
+          <i class="icon icon-{{ icon }}"></i>
+        </span>
+      {% endif %}
+      <input class="control__input" type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %}>
+    </span>
+  </label>
+{% endmacro %}
+
+{% macro checkbox(label, name, isChecked, isRequired=false, isDisabled=false) %}
+  <label class="checkbox">
+    <input class="checkbox__input" type="checkbox" name="{{ name }}" {% if isChecked %}checked="{{ isChecked }}"{% endif %} {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %}>
+    <span class="checkbox__field"></span>
+    {% if label %}
+      <span class="checkbox__label">{{ label }}</span>
+    {% endif %}
+  </label>
+{% endmacro %}

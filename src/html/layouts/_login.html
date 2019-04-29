@@ -1,3 +1,5 @@
+{% from "components/_picture.html" import picture %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Login</h1>
+  <main class="login">
+    <section class="login__content">
+      <div class="login__content-wrapper">
+        <div class="login__logo logo logo--standalone"> 
+          <a href="/" title="To Main page">
+            <img src="/img/logo/logo--dark.svg" alt="Insure SME">
+          </a>
+        </div>
+        
+        {% block content %}{% endblock %}
+      </div>
+    </section>
 
-  {% block content %}{% endblock %}
+    <section class="login__design-block login-design-block">
+      {{ picture("Insure SME", "login-design-block__pic", "/img/login/login__hero", "png") }}
+    </section>
+  </main>
 </body>
 </html>

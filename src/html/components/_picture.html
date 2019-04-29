@@ -1,0 +1,17 @@
+{% macro picture(alt, classname, path, ext, hasWebp=true) %}
+  <picture>
+    {% if hasWebp %}
+    <source
+      srcset="{{ path }}@1x.webp 1x,
+              {{ path }}@2x.webp 2x"
+      type="image/webp"
+    >
+    {% endif %}
+    <img
+      class="{{ classname }}"
+      src="{{ path }}@1x.{{ ext }}"
+      srcset="{{ path }}@2x.{{ ext }} 2x"
+      alt="{{ alt }}">
+      
+  </picture>
+{% endmacro %}

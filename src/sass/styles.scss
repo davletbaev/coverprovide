@@ -1,11 +1,11 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import 'global/variables';
+@import 'global/default';
+@import 'global/fonts';
+@import 'global/utils';
+@import 'global/icons';
 
-* {
-  box-sizing: inherit;
-  font-family: inherit;
-}
+@import 'shared/header';
+@import 'shared/forms/styles';
+@import 'shared/buttons/styles';
+
+@import 'login/styles';

@@ -1,0 +1,49 @@
+.control {
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1;
+    color: $text-gray-2;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0.9em;
+    transform: translateY(-50%);
+    line-height: 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding-left: 2.65em;
+    padding-right: 0.9em;
+    font-size: 1em;
+    color: $text-gray;
+    background: $bg-gray;
+    border-radius: 0.375em;
+  }
+
+  &__input:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px #2B44DC;
+  }
+
+  &--md #{&} {
+    &__input {
+      height: 2.25em;
+    }
+  }
+
+  &--lg #{&} {
+    &__input {
+      height: 2.875em;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.form {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+
+  &__group {
+    margin-top: 1em;
+
+    &--row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--last {
+      margin-top: 2.5em;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__link:link {
+    color: $text-gray;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      color: $color-primary
+    }
+  }
+}

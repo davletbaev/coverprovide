@@ -1,0 +1,29 @@
+.button {
+  background: none;
+  box-shadow: none;
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 2.25em;
+  height: 2.25em;
+  padding: 0 1em;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--lg {
+  height: 2.875em;
+  line-height: 2.875em;
+}
+
+.button--wide {
+  padding: 0 2em;
+}
+
+.button--outline {
+  border-color: currentColor;
+}

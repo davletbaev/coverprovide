@@ -1,5 +1,33 @@
 {% extends "layouts/_login.html" %}
 
+{% from "components/_forms.html" import field, checkbox %}
+
 {% block content %}
-  Sign In
+  <h1 class="login__heading">
+    Sign in to your account
+  </h1>
+
+  <form class="form" action="/" method="POST">
+    <div class="form__group">
+      {{ field('Email Address', type="email",'email', icon="email", isRequired=true, size="lg") }}
+    </div>
+
+    <div class="form__group">
+      {{ field('Password', type="password", 'password', icon="lock", isRequired=true, size="lg") }}
+    </div>
+
+    <div class="form__group form__group--row">
+      {{ checkbox('Remember me', 'remember', true, true) }}
+
+      <a href="/forgot-password" class="form__link">Forgot password?</a>
+    </div>
+
+    <div class="form__group form__group--last">
+      <button class="button button--lg button--primary button--wide" type="submit">Sign in</button>
+    </div>
+  </form>
+
+  <div class="login__registered">
+    Don't have an account? <a href="/signup">Sign up</a>
+  </div>
 {% endblock %}

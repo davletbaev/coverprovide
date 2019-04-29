@@ -1,0 +1,35 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    @extend .visually-hidden
+  }
+
+  &__label {
+    margin-left: 0.8em;
+    line-height: 1em;
+  }
+
+  &__field {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #A5A8B9;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0.5px 1px rgba(10, 15, 38, 0.1);
+    border-radius: 3px;
+  }
+
+  &__input:focus + #{&}__field {
+    outline: none;
+    box-shadow: 0 0 0 1px $color-primary;
+  }
+
+  &__input:checked + #{&}__field {
+    border-color: #27B67A;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.85355 0.146447C7.65829 -0.0488155 7.34171 -0.0488155 7.14645 0.146447L2.5 4.79289L0.853554 3.14645C0.658292 2.95118 0.341709 2.95118 0.146447 3.14645C-0.0488155 3.34171 -0.0488155 3.65829 0.146447 3.85355L2.14645 5.85355C2.34171 6.04882 2.65829 6.04882 2.85355 5.85355L7.85355 0.853554C8.04882 0.658292 8.04882 0.341709 7.85355 0.146447Z' fill='%2327B67A'/%3E%3C/svg%3E%0A");
+  }
+}
