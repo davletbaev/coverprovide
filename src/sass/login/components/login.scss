@@ -16,7 +16,7 @@
     &-wrapper {
       max-width: 450px;
       width: 100%;
-      padding: 60px;
+      padding: 3.75em;
     }
   }
 
@@ -38,6 +38,10 @@
   }
 
   &__registered {
-    margin-top: 50px;
+    margin-top: 3.125em;
+  }
+
+  @include media("<768px") {
+    font-size: 0.8rem;
   }
 }
