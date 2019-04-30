@@ -1,0 +1,68 @@
+.contact-card {
+  padding: 0 3.125em;
+
+  &__body {
+    padding: 3.125em;
+    background-image: url('/img/shared/contact-card__cover@1x.png'), linear-gradient(148.43deg, #3F46E3 23.45%, #69FFD2 138.71%);
+    background-position: 50% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+  }
+
+  &__content {
+    width: 50%;
+    margin-left: auto;
+    text-align: left;
+    color: $text-white;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.75em;
+    line-height: 1.57;
+    white-space: pre-line;
+  }
+
+  &__contacts {
+    margin-top: 3.125em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-label {
+      font-size: 1.25em;
+      font-weight: 600;
+    }
+
+    &-item {
+      margin-top: 1em;
+
+      &:last-child {
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+  @include media("retina2x") {
+    background: url('/img/shared/contact-card__cover@2x.png'), linear-gradient(148.43deg, #3F46E3 23.45%, #69FFD2 138.71%);
+  }
+}
+
+.contact-link {
+  color: $text-white;
+  border: 0;
+  font-size: 1.25em;
+  line-height: 1.5;
+
+  .icon {
+    margin-right: 0.4em;
+    font-size: 1.3em;
+  }
+
+  &:hover {
+    .topbar__link-label {
+      border-bottom: 1px solid currentColor;
+    }
+  }
+}
