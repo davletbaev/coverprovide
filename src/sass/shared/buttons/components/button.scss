@@ -1,5 +1,6 @@
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background: none;
   box-shadow: none;
   font-size: 1em;
@@ -10,6 +11,16 @@
   border-radius: 6px;
   border: 1px solid transparent;
   cursor: pointer;
+
+  & .icon {
+    &:first-child {
+      margin-right: 0.625em;
+    }
+
+    &:last-child {
+      margin-left: 0.625em;
+    }
+  }
 
   &:focus {
     outline: none;
