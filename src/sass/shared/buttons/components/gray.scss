@@ -1,0 +1,15 @@
+.button--gray {
+  color: $text-dark;
+  background: #E6E6EE;
+
+  &:hover,
+  &:focus {
+    background: #D8D9ED;
+  }
+
+  &.button--outline {
+    color: $text-dark;
+    border-color: #E6E6EE;
+    background: none;
+  }
+}

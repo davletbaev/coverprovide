@@ -144,6 +144,35 @@
       <h2 class="section__subtitle">Products</h2>
       <p class="section__title">Most Common Insurance Products
                                   for business owners</p>
+
+      <div class="iconic-block-group">
+        {% set iconicGroup1 = [
+          { icon: 'lifebelt', label: 'Marine Cargo' },
+          { icon: 'earth', label: 'Travel' },
+          { icon: 'home', label: 'Property' },
+          { icon: 'chart', label: 'Commercial\n Auto Insurance' },
+          { icon: 'cyber', label: 'Cyber Insurance' },
+          { icon: 'receipt', label: 'Work Injury\n Compensation' },
+          { icon: 'list', label: 'General Liability\n insurance' },
+          { icon: 'flag-blue', label: 'Fidelity Guarantee\n Insurance' },
+          { icon: 'card', label: 'Trade Credit\n Insurance' }
+        ] %}
+
+        {% for item in iconicGroup1 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </section>
 {% endblock %}
