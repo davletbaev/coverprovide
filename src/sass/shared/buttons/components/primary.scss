@@ -6,9 +6,10 @@
   &:focus {
     background: rgba($color-primary-2, .7);
   }
+  
+  &.button--outline {
+    color: $color-primary-2;
+    background: none;
+  }
 }
 
-.button--primary.button--outline {
-  color: $color-primary-2;
-  background: none;
-}

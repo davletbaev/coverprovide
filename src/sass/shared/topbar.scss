@@ -1,0 +1,32 @@
+.topbar {
+  height: 3.25em;
+  background-color: #355EA8;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 3.125em;
+    }
+  }
+
+  &__link:link {
+    color: $text-white;
+    border: 0;
+
+    .icon {
+      font-size: 1.3em;
+    }
+
+    &:hover {
+      .topbar__link-label {
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+}
