@@ -2,7 +2,10 @@ const browsersync  = require('browser-sync')
 
 const bs = browsersync.init({
     server: {
-      baseDir: "./dist"
+      baseDir: "./dist",
+      serveStaticOptions: {
+        extensions: ['html']
+      }
     },
     https: true
 });
