@@ -1,5 +1,17 @@
 {% extends "layouts/_login.html" %}
 
 {% block content %}
-  Sign In Error
+  <span class="login__error-icon">
+    <i class="icon icon--error icon--circle"></i>
+  </span>
+
+  <h1 class="login__heading">Error page sign in</h1>
+  
+  <p class="login__error-text">
+    Lorem Ipsum is simply dummy text of the  printing and typesetting industry.
+  </p>
+
+  <div class="form__group--last">
+    <button class="button button--lg button--primary button--outline button--wide" type="submit">Back</button>
+  </div>
 {% endblock %}

@@ -30,15 +30,33 @@
   }
 
   &__heading {
-    margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
     font-size: 1.75em;
     line-height: 1.3;
     color: $text-dark;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  &__form {
+    margin-top: 1.75em;
   }
 
   &__registered {
     margin-top: 3.125em;
+  }
+
+  &__error-icon {
+    font-size: 1.75em;
+  }
+  
+  &__error-text {
+    margin: 1em 0;
+    font-size: 1.125em;
+    line-height: 1.44;
+    color: $text-dark-2;
   }
 
   @include media("<768px") {

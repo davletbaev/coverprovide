@@ -7,7 +7,7 @@
     <span class="control__wrapper">
       {% if icon %}
         <span class="control__icon">
-          <i class="icon icon-{{ icon }}"></i>
+          <i class="icon icon--{{ icon }}"></i>
         </span>
       {% endif %}
       <input class="control__input" type="{{ type }}" name="{{ name }}" placeholder="{{ placeholder }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %}>

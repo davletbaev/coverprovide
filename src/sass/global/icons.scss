@@ -1,8 +1,8 @@
-$icons-map: email, lock;
+$icons-map: email, lock, error;
 
 @mixin icons {
 	@each $icon in $icons-map {
-		.icon-#{$icon} {
+		.icon--#{$icon} {
 			background-image: url("/img/icons/#{$icon}.svg");
     }
   }
@@ -16,6 +16,15 @@ $icons-map: email, lock;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.icon--circle {
+  width: 1.64em;
+  height: 1.64em;
+  padding: 0.32em;
+  background-color: $bg-icon;
+  background-size: 1em;
+  border-radius: 50%;
 }
 
 @include icons
