@@ -1,4 +1,4 @@
-$icons-map: email, lock, error, phone;
+$icons-map: email, lock, error, phone, up;
 
 @mixin icons {
 	@each $icon in $icons-map {
