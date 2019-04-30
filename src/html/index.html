@@ -52,9 +52,9 @@
     </div>
   </section>
 
-  <section class="home-partners">
-    <div class="container home-partners__container">
-      <div class="home-partners-slider slider">
+  <section class="section section--lead section--filled">
+    <div class="container">
+      <div class="slider">
         <div class="slider__nav">
           <button class="slider__prev slider__btn"></button>
           <button class="slider__next slider__btn"></button>
@@ -78,6 +78,72 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Benefits</h2>
+      <div class="benefits">
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Amazing Prices", "benefits__item-img", "/img/home/benefits/home__benefit-1", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Amazing Prices</h3> 
+              <p class="benefits__item-desc">Immediately get your insurance quotation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Instant Coverage", "benefits__item-img", "/img/home/benefits/home__benefit-2", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Instant Coverage</h3> 
+              <p class="benefits__item-desc">All your insurance needs in one online environment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Incredible Service", "benefits__item-img", "/img/home/benefits/home__benefit-3", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Incredible Service</h3> 
+              <p class="benefits__item-desc">Easy decision and buying process</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled">
+    <div class="container">
+      <h2 class="section__subtitle">Products</h2>
+      <p class="section__title">Most Common Insurance Products
+                                  for business owners</p>
     </div>
   </section>
 {% endblock %}
