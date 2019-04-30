@@ -175,4 +175,68 @@
       </div>
     </div>
   </section>
+
+  <section class="section section--filled">
+    <div class="container">
+      <h2 class="section__subtitle">Segments</h2>
+      <p class="section__title">Industry specific offers by Segments</p>
+
+      <div class="iconic-block-group">
+        {% set iconicGroup2 = [
+          { icon: 'briefcase', label: 'Raw materials\n supplier' },
+          { icon: 'bull-horn', label: 'Manufacturer' },
+          { icon: 'rotate-axis', label: 'Wholesaler' },
+          { icon: 'price-tag', label: 'Retailer' },
+          { icon: 'user', label: 'User' }
+        ] %}
+
+        {% for item in iconicGroup2 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled">
+    <div class="container">
+      <p class="section__title">Manage your Business insurance</p>
+
+      <div class="iconic-block-group">
+        {% set iconicGroup3 = [
+          { icon: 'eye', label: 'See your quotes' },
+          { icon: 'check-circle-blue', label: 'See your insurances' },
+          { icon: 'piggy-bank', label: 'See your invoicies' },
+          { icon: 'note', label: 'File a claim' }
+        ] %}
+
+        {% for item in iconicGroup3 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <a href="/login" class="section__button button button--primary button--outline button--lg">My account log in</a>
+    </div>
+  </section>
 {% endblock %}
