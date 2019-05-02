@@ -1,0 +1,46 @@
+{% from "components/_forms.html" import field, select %}
+
+{% set industryOptions = [{
+  label: 'Personal Services',
+  value: 0
+}] %}
+
+{% set providesOptions = [{
+  label: 'QBE',
+  value: 0
+},{
+  label: 'AXA',
+  value: 0
+},{
+  label: 'Librty Mutual',
+  value: 0
+},{
+  label: 'Chubb',
+  value: 0
+},{
+  label: 'Tokiomarine',
+  value: 0
+}] %}
+
+
+<div class="hidden" id="quoteModal">
+  <p class="modal__label">Please provide some criteria for SME Package:</p>
+
+  <form action="/" method="GET" class="modal__form form">
+    <div class="form__group">
+      {{ select('Industry', 'industry', options=industryOptions, size="md") }}
+    </div>
+
+    <div class="form__group">
+      {{ field('Budget', type="number", 'budget', icon="dollar", size="md", align="right") }}
+    </div>
+
+    <div class="form__group">
+      {{ select('Provides', 'provides', options=providesOptions, isMulti=true, size="md") }}
+    </div>
+
+    <div class="form__group">
+        <button class="button button--primary button--block button--uppercase" type="submit">Search</button>
+    </div>
+  </form>
+</div>

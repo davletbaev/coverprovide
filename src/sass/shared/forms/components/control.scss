@@ -22,12 +22,21 @@
 
   &__input {
     width: 100%;
-    padding-left: 2.65em;
-    padding-right: 0.9em;
+    padding: 0 0.9em;
     font-size: 1em;
     color: $text-gray;
     background: $bg-gray;
     border-radius: 0.375em;
+
+    &[type=number]::-webkit-inner-spin-button, 
+    &[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+
+    &[type=number] {
+        -moz-appearance: textfield;
+    }
   }
 
   &__input:focus {
@@ -45,5 +54,17 @@
     &__input {
       height: 2.875em;
     }
+  }
+
+  &--has-icon #{&}__input {
+    padding-left: 2.65em;
+  }
+
+  &--align-right #{&}__input {
+    text-align: right;
+  }
+
+  &--align-left #{&}__input {
+    text-align: left;
   }
 }

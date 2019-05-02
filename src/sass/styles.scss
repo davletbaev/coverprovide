@@ -7,17 +7,20 @@
 @import 'global/icons';
 @import 'global/layout';
 
-@import 'vendor/slick/slick';
+@import 'vendor/slick';
+@import 'vendor/jquery.modal';
+@import 'vendor/select2';
 
+@import 'shared/buttons/styles';
+@import 'shared/forms/styles';
 @import 'shared/topbar';
 @import 'shared/header';
 @import 'shared/footer';
 @import 'shared/cover';
 @import 'shared/logo';
+@import 'shared/modal';
 @import 'shared/iconic-block';
 @import 'shared/contact-card';
-@import 'shared/forms/styles';
-@import 'shared/buttons/styles';
 
 @import 'login/styles';
 @import 'home/styles';

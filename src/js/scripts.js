@@ -1,5 +1,6 @@
 $(document).ready(() => {
   initSliders();
+  initSelects();
 })
 
 function initSliders() {
@@ -24,6 +25,17 @@ function initSliders() {
     }
 
     $(this).slick(options)
+  }) 
+}
+
+function initSelects() {
+  $('[data-select]').each(function() {
+    $(this).select2({
+      minimumResultsForSearch: Infinity
+    })
+    $(this).on('select2:opening select2:closing', function( event ) {
+      var $searchfield = $(this).parent().find('.select2-search__field');
+      $searchfield.prop('disabled', true);
+  });
   })
-  
 }
