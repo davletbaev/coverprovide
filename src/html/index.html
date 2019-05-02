@@ -84,7 +84,8 @@
   <section class="section">
     <div class="container">
       <h2 class="section__title">Benefits</h2>
-      <div class="benefits">
+
+      <div class="section__content benefits">
         <div class="benefits__item">
           <div class="benefits__item-icon">
             <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
@@ -145,7 +146,7 @@
       <p class="section__title">Most Common Insurance Products
                                   for business owners</p>
 
-      <div class="iconic-block-group">
+      <div class="section__content iconic-block-group">
         {% set iconicGroup1 = [
           { icon: 'lifebelt', label: 'Marine Cargo' },
           { icon: 'earth', label: 'Travel' },
@@ -180,7 +181,7 @@
     <div class="container">
       <h2 class="section__title">Contact Your personal Advisor</h2>
 
-      <div class="contact-card">
+      <div class="section__content contact-card">
         <div class="contact-card__body">
           <div class="contact-card__content">
             <h3 class="contact-card__title">Highly skilled adbisor
@@ -215,7 +216,7 @@
       <h2 class="section__subtitle">Segments</h2>
       <p class="section__title">Industry specific offers by Segments</p>
 
-      <div class="iconic-block-group">
+      <div class="section__content iconic-block-group">
         {% set iconicGroup2 = [
           { icon: 'briefcase', label: 'Raw materials\n supplier' },
           { icon: 'bull-horn', label: 'Manufacturer' },
@@ -242,11 +243,61 @@
     </div>
   </section>
 
-  <section class="section section--filled">
+  <section class="section">
     <div class="container">
-      <p class="section__title">Manage your Business insurance</p>
+      <h2 class="section__title">Why Business like us</h2>
+      <p class="section__desc">Our mission is to make insurance more accesible to business owners. Every Business owner needs to do informed and optimizied descision.</p>
 
-      <div class="iconic-block-group">
+      <div class="section__content slider slider--has-divider">
+        <div class="slider__nav">
+          <button class="slider__prev slider__btn"></button>
+          <button class="slider__next slider__btn"></button>
+        </div>
+
+        <div class="slider__items slider__items--justify-center">
+          <div class="slider__item">
+            <blockquote class="review">
+              <p class="review__text">
+                Owner of Business xx I never had such a good isnurance buying experience
+              </p>
+              <footer class="review__footer">
+                <div class="review__img-wrap">
+                  {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+                </div>
+                <cite class="review__author">
+                  <span class="review__author-name">Jemee Lee</span>
+                  <span class="review__author-position">CEO, Tokiomarine</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+
+          <div class="slider__item">
+            <blockquote class="review">
+              <p class="review__text">
+                Owner of Business xx I never had such a good isnurance buying experience
+              </p>
+              <footer class="review__footer">
+                <div class="review__img-wrap">
+                  {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
+                </div>
+                <cite class="review__author">
+                  <span class="review__author-name">Jemee Lee</span>
+                  <span class="review__author-position">CEO, Tokiomarine</span>
+                </cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled section--last">
+    <div class="container">
+      <h2 class="section__title">Manage your Business insurance</h2>
+
+      <div class="section__content iconic-block-group">
         {% set iconicGroup3 = [
           { icon: 'eye', label: 'See your quotes' },
           { icon: 'check-circle-blue', label: 'See your insurances' },

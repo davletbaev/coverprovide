@@ -17,6 +17,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    &--justify-center {
+      justify-content: center;
+    }
   }
 
   &__btn {
@@ -43,5 +47,22 @@
 
   &__prev {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='20' fill='none'%3E%3Cpath fill='%2352516E' d='M2.896 10L9.7 17.936a1.25 1.25 0 0 1-1.898 1.628l-7.5-8.75a1.25 1.25 0 0 1 0-1.627L7.8.437a1.25 1.25 0 0 1 1.898 1.627L2.896 10z'/%3E%3C/svg%3E%0A");
+  }
+
+  &--has-divider #{&} {
+    &__item {
+      padding: 0 5%;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    background-color: #ECECF1;
   }
 }

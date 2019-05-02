@@ -12,8 +12,7 @@
   text-align: center;
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 1.5em;
+    margin: 0;
     font-size: 2.5em;
     font-weight: 500;
     line-height: 1.325;
@@ -31,8 +30,21 @@
     text-align: center;
   }
 
+  &__desc {
+    max-width: 670px;
+    margin: 1.2em auto;
+    font-size: 1.25em;
+    line-height: 1.5;
+    text-align: center;
+    color: $text-dark-2;
+  }
+
+  &__content {
+    margin-top: 3.75em;
+  }
+
   &__button {
-    margin-top: 6.25em;
+    margin-top: 4.5em;
   }
 
   &--lead {
@@ -42,5 +54,9 @@
   &--filled {
     background: rgba(248, 248, 252, 0.8);
     padding: 3.75em;
+  }
+
+  &--last {
+    padding-bottom: 6.5em;
   }
 }
