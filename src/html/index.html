@@ -54,28 +54,36 @@
 
   <section class="section section--lead section--filled">
     <div class="container">
-      <div class="slider">
-        <div class="slider__nav">
-          <button class="slider__prev slider__btn"></button>
-          <button class="slider__next slider__btn"></button>
+      <div class="slider" data-slick="partners">
+        <div class="slider__item">
+          {{ picture("QBE", "home-partner-slider__slide", "/img/home/partners/qbe", "png") }}
         </div>
-
-        <div class="slider__items">
-          <div class="slider__item">
-            {{ picture("QBE", "home-partner-slider__slide", "/img/home/partners/qbe", "png") }}
-          </div>
-          <div class="slider__item">
-            {{ picture("Tokio Marine HCC", "home-partner-slider__slide", "/img/home/partners/tokiomarine", "png") }}
-          </div>
-          <div class="slider__item">
-            {{ picture("Chubb Limited", "home-partner-slider__slide", "/img/home/partners/chubb", "png") }}
-          </div>
-          <div class="slider__item">
-            {{ picture("AXA Group", "home-partner-slider__slide", "/img/home/partners/axa", "png") }}
-          </div>
-          <div class="slider__item">
-            {{ picture("Liberty Mutual Insurance", "home-partner-slider__slide", "/img/home/partners/liberty", "png") }}
-          </div>
+        <div class="slider__item">
+          {{ picture("Tokio Marine HCC", "home-partner-slider__slide", "/img/home/partners/tokiomarine", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Chubb Limited", "home-partner-slider__slide", "/img/home/partners/chubb", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("AXA Group", "home-partner-slider__slide", "/img/home/partners/axa", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Liberty Mutual Insurance", "home-partner-slider__slide", "/img/home/partners/liberty", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("QBE", "home-partner-slider__slide", "/img/home/partners/qbe", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Tokio Marine HCC", "home-partner-slider__slide", "/img/home/partners/tokiomarine", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Chubb Limited", "home-partner-slider__slide", "/img/home/partners/chubb", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("AXA Group", "home-partner-slider__slide", "/img/home/partners/axa", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Liberty Mutual Insurance", "home-partner-slider__slide", "/img/home/partners/liberty", "png") }}
         </div>
       </div>
     </div>
@@ -248,46 +256,90 @@
       <h2 class="section__title">Why Business like us</h2>
       <p class="section__desc">Our mission is to make insurance more accesible to business owners. Every Business owner needs to do informed and optimizied descision.</p>
 
-      <div class="section__content slider slider--has-divider">
-        <div class="slider__nav">
-          <button class="slider__prev slider__btn"></button>
-          <button class="slider__next slider__btn"></button>
+      <div class="section__content slider slider--has-divider" data-slick="reviews">
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
         </div>
 
-        <div class="slider__items slider__items--justify-center">
-          <div class="slider__item">
-            <blockquote class="review">
-              <p class="review__text">
-                Owner of Business xx I never had such a good isnurance buying experience
-              </p>
-              <footer class="review__footer">
-                <div class="review__img-wrap">
-                  {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
-                </div>
-                <cite class="review__author">
-                  <span class="review__author-name">Jemee Lee</span>
-                  <span class="review__author-position">CEO, Tokiomarine</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </div>
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
 
-          <div class="slider__item">
-            <blockquote class="review">
-              <p class="review__text">
-                Owner of Business xx I never had such a good isnurance buying experience
-              </p>
-              <footer class="review__footer">
-                <div class="review__img-wrap">
-                  {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
-                </div>
-                <cite class="review__author">
-                  <span class="review__author-name">Jemee Lee</span>
-                  <span class="review__author-position">CEO, Tokiomarine</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </div>
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
         </div>
       </div>
     </div>
