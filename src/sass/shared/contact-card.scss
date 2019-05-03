@@ -49,6 +49,35 @@
       background-image: url('/img/shared/contact-card__cover@2x.png'), linear-gradient(148.43deg, #3F46E3 23.45%, #69FFD2 138.71%);
     }
   }
+
+  @include media("<1024px") {
+    padding: 0;
+  }
+
+  @include media("<768px") {
+    &__body {
+      background-position: 20% 100%;
+      background-size: auto 60%, 100%;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+    &__contacts {
+      align-items: flex-end;
+    }
+  }
+
+  @include media("<=425px") {
+    &__body {
+      padding: 20px;
+    }
+  }
 }
 
 .contact-link {

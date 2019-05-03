@@ -1,5 +1,17 @@
 .hidden {
   display: none;
+
+  @include media(">=1024px") {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @include media("<1024px") {
+    &--mobile {
+      display: none;
+    }
+  }
 }
 
 .visually-hidden {

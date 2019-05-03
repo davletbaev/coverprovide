@@ -22,4 +22,24 @@
   &__link.contact-link {
     font-size: 1em;
   }
+
+  @include media("<768px") {
+    display: none;
+    top: auto;
+    bottom: 0;
+
+    &__container {
+      justify-content: center;
+    }
+
+    .hidden--mobile {
+      display: none;
+    }
+  }
+
+  @include media("<=425px") {
+    &__container {
+      justify-content: flex-start;
+    }
+  }
 }

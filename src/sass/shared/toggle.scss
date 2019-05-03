@@ -1,0 +1,33 @@
+.toggle {
+  height: 2em;
+  padding: 0.5em 0;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__item {
+    display: block;
+    width: 2em;
+    height: 1px;
+    background-color: #fff;
+    border-radius: 0.5px;
+    will-change: transform;
+    transition: transform ease-in-out 0.2s;
+  }
+
+  &--active #{&} {
+    &__item--first {
+      transform: translateY(0.45em) rotate(45deg);
+    }
+
+    &__item--second {
+      transform: translateY(-0.45em) rotate(-45deg)
+    }
+  }
+
+  @include media(">=768px") {
+    display: none;
+  }
+}

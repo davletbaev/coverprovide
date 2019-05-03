@@ -1,5 +1,5 @@
 .cover {
-  padding-top: 13%;
+  padding-top: 200px;
   height: 100vh;
   max-height: 800px;
   color: $text-white;
@@ -7,11 +7,13 @@
   
   &__container {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
   }
 
   &__item {
     width: 100%;
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -33,5 +35,35 @@
     line-height: 1.5;
     font-weight: 500;
     white-space: pre-line;
+  }
+
+  @include media("<1024px") {
+    max-height: none;
+    height: auto;
+    padding-bottom: 40px;
+    font-size: 0.8rem;
+  }
+
+  @include media("<768px") {
+    padding-top: 150px;
+    font-size: 0.6rem;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__desc {
+      text-align: center;
+      font-size: 1.7em;
+    }
+
+    &__item {
+      flex: 1 0 100%;
+      align-items: center;
+
+      + .cover__item {
+        margin-top: 40px;
+      }
+    }
   }
 }

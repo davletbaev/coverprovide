@@ -76,4 +76,8 @@
       opacity: 0.85;
     }
   }
+
+  @include media("<768px") {
+    max-width: none;
+  }
 }

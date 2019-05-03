@@ -12,4 +12,10 @@
   .control__label {
     font-size: 0.875em;
   }
+
+  @include media("<=425px") {
+    &__label {
+      font-size: 1em;
+    }
+  }
 }

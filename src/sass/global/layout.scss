@@ -4,6 +4,16 @@
   max-width: 1110px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include media("<1200px") {
+    max-width: 980px;
+  }
+
+  @include media("<1024px") {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 768px;
+  }
 }
 
 .section {
@@ -58,5 +68,16 @@
 
   &--last {
     padding-bottom: 6.5em;
+  }
+
+  @include media("<1024px") {
+    font-size: 0.8rem;
+  }
+
+  @include media("<768px") {
+    &__title {
+      font-size: 2em;
+      white-space: normal;
+    }
   }
 }

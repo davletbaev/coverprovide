@@ -9,6 +9,7 @@
     width: 0;
 
     &-wrap {
+      width: 100%;
       border-radius: 1em;
       overflow: hidden;
       box-shadow: 0px 8px 20px rgba(40, 42, 86, 0.06);
@@ -62,6 +63,21 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+    }
+  }
+
+  @include media("<768px") {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      flex: 1 0 100%;
+      max-width: 400px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
     }
   }
 }

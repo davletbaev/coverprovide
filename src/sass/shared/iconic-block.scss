@@ -4,8 +4,10 @@
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: 0 3.25em;
+  padding: 0 2em;
   margin-bottom: 3.25em;
+  flex: 0 0 25%;
+  font-size: 1rem;
 
   &__icon {
     font-size: 2.6em;
@@ -27,7 +29,27 @@
   &-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: -3.25em;
+  }
+
+  @include media("<1024px") {
+    padding: 0 2em;
+    flex: 0 0 33%;
+  }
+
+  @include media("<768px") {
+    padding: 0 1.5em;
+    margin-bottom: 2.5em;
+    flex: 0 0 50%;
+  }
+
+  @include media("<=425px") {
+    padding: 0 1em;
+    flex: 0 0 100%;
+
+    &-group {
+      justify-content: center;
+    }
   }
 }

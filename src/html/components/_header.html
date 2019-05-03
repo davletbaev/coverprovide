@@ -1,25 +1,37 @@
 <header class="header {% if headerIsWhite %}header--white{% endif %}">
   <nav class="header__container container">
     <a class="header__logo logo" href="/" title="To Main page">
-      <img src="{% if headerIsWhite %}/img/logo/logo--white.svg{% else %}/img/logo/logo--dark.svg{% endif %}" alt="Insure SME">
+      <img class="logo__img" src="{% if headerIsWhite %}/img/logo/logo--white.svg{% else %}/img/logo/logo--dark.svg{% endif %}" alt="Insure SME">
     </a>
 
-    <ul class="main-nav">
-      <li class="main-nav__item">
-        <a href="/" class="main-nav__link {% if currentPath == '/' %}main-nav__link--active{% endif %}">Home</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="/quotations" class="main-nav__link {% if currentPath == '/quotations' %}main-nav__link--active{% endif %}">Get Quotations</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="/type-of-insurance" class="main-nav__link {% if currentPath == '/type-of-insurance' %}main-nav__link--active{% endif %}">Type of Issurance</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="/industries" class="main-nav__link {% if currentPath == '/industries' %}main-nav__link--active{% endif %}">Industries</a>
-      </li>
-      <li class="main-nav__item">
-        <a href="/contacts" class="main-nav__link {% if currentPath == '/contacts' %}main-nav__link--active{% endif %}">Contact us</a>
-      </li>
-    </ul>
+    <button data-toggle="#modalNav" class="toggle">
+      <span class="toggle__item toggle__item--first"></span>
+      <span class="toggle__item toggle__item--second"></span>
+    </button>
+
+    <div class="header__collapse" id="modalNav">
+      <ul class="main-nav">
+        <li class="main-nav__item">
+          <a href="/" class="main-nav__link {% if currentPath == '/' %}main-nav__link--active{% endif %}">Home</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/quotations" class="main-nav__link {% if currentPath == '/quotations' %}main-nav__link--active{% endif %}">Get Quotations</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/type-of-insurance" class="main-nav__link {% if currentPath == '/type-of-insurance' %}main-nav__link--active{% endif %}">Type of Issurance</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/industries" class="main-nav__link {% if currentPath == '/industries' %}main-nav__link--active{% endif %}">Industries</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/contacts" class="main-nav__link {% if currentPath == '/contacts' %}main-nav__link--active{% endif %}">Contact us</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="/login" class="topbar__item button button--white button--outline">Sign in</a>
+        </li>
+      </ul>
+
+      {% include "components/_topbar.html" %}
+    </div>
   </nav>
 </header>

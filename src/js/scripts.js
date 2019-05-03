@@ -1,31 +1,57 @@
 $(document).ready(() => {
-  initSliders();
-  initSelects();
+  initMobileNav()
+  initSelects()
+  initSliders()
+  initResizeWatcher()
 })
 
+function initMobileNav() {
+  $('[data-toggle]').on('click', function(e) {
+    if ($.modal.isActive()) {
+      $(this).toggleClass('toggle--active')
+      $.modal.close()
+      return
+    }
+    
+    $(this).toggleClass('toggle--active')
+    const target = $(this).data('toggle');
+    $(target).modal();
+  })
+}
+
 function initSliders() {
-  $('[data-slick]').each(function() {
-    const type = $(this).data('slick')
+  function createSlider(elem, options) {
+    if (elem.hasClass('slick-initialized')) {
+      elem.slick('unslick');
+    }
 
-    let options = {
+    let defaultOptions = {
       prevArrow: '<button type="button" class="slick-prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"></button>'
+      nextArrow: '<button type="button" class="slick-next"></button>',
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      variableWidth: false,
+      ...options
     }
 
-    switch (type) {
-      case 'partners':
-        options.slidesToShow = 5
-        options.slidesToScroll = 5
-        options.variableWidth = true
-        break
-      case 'reviews':
-        options.slidesToShow = 2
-        options.slidesToScroll = 2
-        break
-    }
+    elem.slick(defaultOptions)
+  }
 
-    $(this).slick(options)
-  }) 
+  window.addEventListener('changeDeviceType', (e) => {
+    const partnersSlider = $('[data-slick="partners"]')
+    const reviewsSlider = $('[data-slick="reviews"]')
+
+    if (e.detail.device === 'desktop') {
+      createSlider(partnersSlider, { slidesToShow: 5, slidesToScroll: 5, variableWidth: true, centerMode: false })
+      createSlider(reviewsSlider, { slidesToShow: 2, slidesToScroll: 2, variableWidth: false })
+    } else if (e.detail.device === 'tablet') {
+      createSlider(partnersSlider, { slidesToShow: 3, slidesToScroll: 3, variableWidth: true, centerMode: true })
+      createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
+    } else {
+      createSlider(partnersSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: true, centerMode: true })
+      createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
+    }
+  })
 }
 
 function initSelects() {
@@ -38,4 +64,33 @@ function initSelects() {
       $searchfield.prop('disabled', true);
   });
   })
+}
+
+function initResizeWatcher() {
+  let width = $(window).width()
+  let currentDevice = getDeviceType(width)
+
+  const event = new CustomEvent('changeDeviceType', { 'detail': { device: currentDevice } })
+  window.dispatchEvent(event)
+
+  $(window).on('resize', () => {
+    width = $(window).width()
+    const device = getDeviceType(width)
+
+    if (device !== currentDevice) {
+      currentDevice = device
+      event.detail.device = currentDevice
+      window.dispatchEvent(event)
+    }
+  })
+}
+
+function getDeviceType(width) {
+  if (width >= 1024) {
+    return 'desktop'
+  } else if (width >= 768 && width < 1024) {
+    return 'tablet'
+  } else {
+    return 'mobile'
+  }
 }

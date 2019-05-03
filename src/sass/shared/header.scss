@@ -4,6 +4,7 @@
   left: 0;
   right: 0;
   height: 5em;
+  z-index: 1001;
   color: $text-dark;
 
   &__container {
@@ -15,6 +16,38 @@
 
   &--white {
     color: $text-white;
+  }
+
+  &__collapse {
+    &.modal {
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background-color: #314CAA;
+      color: #fff;
+      padding: 20px;
+
+      a.close-modal {
+        display: none;
+      }
+    }
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  @include media("<768px") {
+    top: 0;
+
+    &__collapse {
+      display: none;
+
+      .topbar {
+        display: block;
+      }
+    }
   }
 }
 
@@ -28,6 +61,10 @@
 
   &__item {
     margin-left: 1.25em;
+
+    &:last-child {
+      display: none;
+    }
   }
 
   &__link {
@@ -38,6 +75,39 @@
 
     &:hover {
       opacity: 0.75;
+    }
+  }
+
+  @include media("<768px") {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    margin: 0 -10px 0 -10px;
+
+    &__item {
+      margin-top: 1em;
+      margin-left: -10px;
+      margin-bottom: 0.5em;
+
+      &:last-child {
+        display: block;
+      }
+    }
+
+    .button {
+      font-size: 1rem;
+    }
+  }
+
+  @include media("<=425px") {
+    align-items: flex-start;
+    margin: 0;
+
+    &__item {
+      &:last-child {
+        margin-left: 0;
+      }
     }
   }
 }

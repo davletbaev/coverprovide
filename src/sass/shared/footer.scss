@@ -15,6 +15,20 @@
     border: 0;
     font-size: 1.625em;
   }
+
+  @include media("<768px") {
+    height: auto;
+    padding: 1.5em 0;
+
+    &__container {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    &__up {
+      margin-right: 0;
+    }
+  }
 }
 
 .footer-nav {
@@ -37,6 +51,24 @@
 
     &:hover {
       opacity: 0.75;
+    }
+  }
+
+  @include media("<768px") {
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    margin-top: 2.5em;
+    margin-left: -10px;
+
+    &__item {
+      margin-left: 0;
+      flex: 1 0 auto;
+    }
+  }
+
+  @include media("<=425px") {
+    &__item {
+      flex: 1 1 50%;
     }
   }
 }
