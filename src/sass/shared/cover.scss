@@ -1,5 +1,5 @@
 .cover {
-  padding-top: 200px;
+  padding-top: 150px;
   height: 100vh;
   max-height: 800px;
   color: $text-white;
@@ -8,6 +8,8 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
     height: 100%;
   }
 
@@ -17,9 +19,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
   }
 
   &__title {
+    width: 100%;
     margin-top: 0;
     margin-bottom: 0.5em;
     font-size: 2.5em;
@@ -29,6 +33,7 @@
   }
 
   &__desc {
+    width: 100%;
     margin-top: 0;
     margin-bottom: 1.7em;
     font-size: 1.5em;
@@ -38,6 +43,7 @@
   }
 
   @include media("<1024px") {
+    padding-top: 200px;
     max-height: none;
     height: auto;
     padding-bottom: 40px;

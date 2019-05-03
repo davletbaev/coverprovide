@@ -185,7 +185,8 @@
     </div>
   </section>
 
-  {% include "components/_contact-card.html" %}
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard() }}
 
   <section class="section section--filled">
     <div class="container">
