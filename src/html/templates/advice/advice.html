@@ -1,0 +1,16 @@
+{% extends "layouts/_base.html" %}
+
+{% set title = "Insure SME / Advice" %}
+{% set headerIsWhite = true %}
+
+{% block content %}
+  <section class="cover">
+    <div class="cover__container container">
+      <h1 class="cover__title">Advice</h1>
+      <p class="cover__desc">Our mission is to make insurance more accesible to business owners.
+                          Every Business owner needs to do informed and optimizied descision.</p>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}
