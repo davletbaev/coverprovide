@@ -1,0 +1,176 @@
+{% extends "layouts/_invoice.html" %}
+
+{% set title = "Insure SME / Invoice" %}
+
+{% block content %}
+  <section class="section section--invoice">
+    <div class="section__container container">
+      <p class="invoice__heading">
+        PLEASE READ THIS POLICY (AND THE SCHEDULE WHICH FORMS AN INTEGRAL PART OF THE POLICY) TO ENSURE THAT IT MEETS YOUR REQUIREMENTS
+      </p>
+
+      <p class="invoice__text">
+        This policy (and the Schedule which forms an integral part of the policy) is a legal contract. Please examine it thoroughly to ensure it meets your requirements and if it does not please advise your insurance adviser immediately. We would remind you that you are required to inform us immediately of any facts or changes which we would take into account in our assessment or acceptance of this insurance and failure to do so may invalidate your policy or result in certain covers not operating fully. If you are in doubt as to whether a fact is material or not please contact your insurance adviser. 
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--invoice">
+    <div class="section__container container">
+      <table class="invoice-table">
+        <tr class="invoice-table__row invoice-table__row--head">
+          <th class="invoice-table__head">Policy Schedule</th>
+          <th class="invoice-table__head invoice-table__head--actions">
+            <button class="invoice__download" type="button" data-download-pdf>
+              <span>Download .pdf</span>
+              <i class="icon icon--download"></i>  
+            </button>
+          </th>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Insurer</td>
+          <td class="invoice-table__cell">Great Eastern General Insurance Limited</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Policy Number</td>
+          <td class="invoice-table__cell">SPECIMEN00123</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Insured</td>
+          <td class="invoice-table__cell">ABC Pte Ltd</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Joint-Insured (if applicable)</td>
+          <td class="invoice-table__cell">Not Applicable</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Business Activities</td>
+          <td class="invoice-table__cell">General Trading</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Premises</td>
+          <td class="invoice-table__cell">1 Shenton Way #10-10, Singapore 123456</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Period of Insurance</td>
+          <td class="invoice-table__cell">20 Apr 19 to 20 Apr 20</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Insurance Premium Tax</td>
+          <td class="invoice-table__cell">$ 17.85</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Territorial Limits</td>
+          <td class="invoice-table__cell">Singapore</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Agency Reference</td>
+          <td class="invoice-table__cell">Insure-SME Pte Ltd (000246)</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Limits of Liability</td>
+          <td class="invoice-table__cell">SGD 1,000,000</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section section--invoice">
+    <div class="section__container container">
+      <table class="invoice-table">
+        <tr class="invoice-table__row invoice-table__row--head">
+          <th class="invoice-table__head">Sum insured</th>
+          <th class="invoice-table__head"></th>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 1: Fire & Extraneous Perils on Contents (Excluding Stock-in-Trade)</td>
+          <td class="invoice-table__cell">$ 100000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 2: Theft & Hold Up </td>
+          <td class="invoice-table__cell">$ 50000 (first loss basis)</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 3: All Risks on Contents </td>
+          <td class="invoice-table__cell">$ 0 Not Applicable Under Standard Plan</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 4: Daily Benefits </td>
+          <td class="invoice-table__cell">$ 250 /Day (up to 100 Days)</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 5: Public Liability </td>
+          <td class="invoice-table__cell">$ 500000 - S$500,000 Any One Occurrence - 
+Unlimited Any One Period</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 6: Money </td>
+          <td class="invoice-table__cell">
+            <ol type="a">
+              <li>Money in Transit: $ 500</li>
+              <li>Money in Premises: $ 1000</li>
+              <li>Money kept in locked drawer/safe after 
+business hours in residence of partners/ directors: $ 500</li>
+            </ol>
+          </td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 7: Plate Glass </td>
+          <td class="invoice-table__cell">$ 5000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Secton 8: Personal Accident on the life of any one of the named partner/director (Age not exceeding 70 years old)</td>
+          <td class="invoice-table__cell">1 person</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 9: Daily-in Hospital Income or the partner/director insured</td>
+          <td class="invoice-table__cell">$ 0 Not Applicable</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 10. Fidelity Guarantee </td>
+          <td class="invoice-table__cell">0 employee, limit: $5,000 Any one occurrence & in the aggregate</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Section 11: Fire & Extraneous Perils on Building</td>
+          <td class="invoice-table__cell">$ 0</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="section section--invoice section--last">
+    <div class="section__container container">
+      <table class="invoice-table">
+        <tr class="invoice-table__row invoice-table__row--head">
+          <th class="invoice-table__head invoice-table__head--small" colspan="2">Any applicable Deductible or Time Exclusion will apply in
+            respect of any one Occurrence unless otherwise stated</th>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Common Deductible</td>
+          <td class="invoice-table__cell">SGD 1,000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Earthquake</td>
+          <td class="invoice-table__cell">SGD 1,000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Flood</td>
+          <td class="invoice-table__cell">SGD 1,000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Storm</td>
+          <td class="invoice-table__cell">SGD 1,000</td>
+        </tr>
+        <tr class="invoice-table__row">
+          <td class="invoice-table__cell">Time Exclusions</td>
+          <td class="invoice-table__cell">
+            <ul>
+              <li>Computer Breakdown: 24 hours</li>
+              <li>Machinery Breakdown: 7 day</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+{% endblock %}

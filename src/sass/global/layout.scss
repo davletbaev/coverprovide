@@ -70,6 +70,10 @@
     padding-bottom: 6.5em;
   }
 
+  &--invoice {
+    margin-top: 3.75em;
+  }
+
   @include media("<1024px") {
     font-size: 0.8rem;
   }
