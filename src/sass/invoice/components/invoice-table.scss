@@ -1,0 +1,65 @@
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th:first-child,
+  td:first-child {
+    padding-right: 30px;
+    width: 30%;
+    font-weight: 700;
+  }
+
+
+  &__head {
+    padding: 0.83em 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+
+    &--small {
+      white-space: pre-line;
+      padding: 1em 0;
+      font-size: 1.25em;
+    }
+
+    @include media("<768px") {
+      &--small {
+        white-space: normal;
+      }
+    }
+  }
+
+  &__row {
+    &:not(#{&}--head) {
+      border-bottom: 1px solid rgba(82, 81, 110, 0.3);
+    }
+  }
+
+  &__cell {
+    padding: 1em 0;
+    font-size: 1.25em;
+    line-height: 1.5;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  ol,
+  ul {
+    padding-left: 1em;
+    margin: 0;
+
+    li {
+      white-space: pre-line;
+      
+      &:not(:first-child) {
+        margin-top: 0.35em;
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}

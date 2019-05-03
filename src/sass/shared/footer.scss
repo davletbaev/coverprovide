@@ -29,6 +29,10 @@
       margin-right: 0;
     }
   }
+
+  @media print {
+    display: none;
+  }
 }
 
 .footer-nav {
