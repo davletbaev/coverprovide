@@ -5,9 +5,23 @@
 @import 'global/fonts';
 @import 'global/utils';
 @import 'global/icons';
+@import 'global/layout';
 
-@import 'shared/header';
-@import 'shared/forms/styles';
+@import 'vendor/slick';
+@import 'vendor/jquery.modal';
+@import 'vendor/select2';
+
 @import 'shared/buttons/styles';
+@import 'shared/forms/styles';
+@import 'shared/topbar';
+@import 'shared/header';
+@import 'shared/toggle';
+@import 'shared/footer';
+@import 'shared/cover';
+@import 'shared/logo';
+@import 'shared/modal';
+@import 'shared/iconic-block';
+@import 'shared/contact-card';
 
 @import 'login/styles';
+@import 'home/styles';

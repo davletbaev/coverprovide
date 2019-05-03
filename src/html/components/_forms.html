@@ -1,5 +1,5 @@
-{% macro field(label, type="text", name, placeholder, icon, isRequired=false, isDisabled=false, size="md") %}
-  <label class="control control--{{size}}">
+{% macro field(label, type="text", name, placeholder, icon, isRequired=false, isDisabled=false, size="md", align="left") %}
+  <label class="control control--{{size}} {% if icon %}control--has-icon{% endif %} control--align-{{ align }}">
     {% if label %}
       <span class="control__label">{{ label }}</span>
     {% endif %}
@@ -22,5 +22,26 @@
     {% if label %}
       <span class="checkbox__label">{{ label }}</span>
     {% endif %}
+  </label>
+{% endmacro %}
+
+{% macro select(label, name, options, icon, isMulti=false, isRequired=false, isDisabled=false, size="md") %}
+  <label class="control control--{{size}}">
+    {% if label %}
+      <span class="control__label">{{ label }}</span>
+    {% endif %}
+
+    <span class="control__wrapper">
+      {% if icon %}
+        <span class="control__icon">
+          <i class="icon icon--{{ icon }}"></i>
+        </span>
+      {% endif %}
+      <select data-select type="select" name="{{ name }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} {% if isMulti %}multiple="{{ isMulti }}"{% endif %}>
+        {% for option in options %}
+          <option value="{{ option.value }}">{{ option.label }}</option>
+        {% endfor %}
+      </select>
+    </span>
   </label>
 {% endmacro %}

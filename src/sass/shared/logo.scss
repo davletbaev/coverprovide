@@ -1,0 +1,19 @@
+.logo {
+  height: 3em;
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+
+  &__img {
+    width: auto;
+    height: 100%;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  @include media("<768px") {
+    height: 2.15em;
+  }
+}

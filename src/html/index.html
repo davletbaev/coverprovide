@@ -1,14 +1,379 @@
 {% extends "layouts/_base.html" %}
 
+{% set title = "Insure SME" %}
+{% set headerIsWhite = true %}
+
 {% block content %}
-  <nav>
-    <ul>
-      <li>
-        <a href="/login.html">Login</a>
-      </li>
-      <li>
-        <a href="/error.html">Login Error</a>
-      </li>
-    </ul>
-  </nav>
+  <section class="cover">
+    <div class="cover__container container">
+      <div class="cover__item">
+        <h1 class="cover__title">Commercial Insurance,
+                                  Made Simple</h1>
+        <p class="cover__desc">Comprehensive Coverage Designed
+                                  for Business Owners</p>
+        <a href="#quoteModal" rel="modal:open" class="button button--white button--outline button--lg">
+          <span>Get a free quote</span>
+          <i class="icon icon--right"></i>
+        </a>
+      </div>
+
+      <div class="cover__item">
+        <div class="home-cover-video">
+          <div class="home-cover-video__overlay">
+            <div class="home-cover-video__poster">
+              <img class="home-cover-video__poster-img" src="" alt="">
+            </div>
+
+            <button class="home-cover-video__play"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-cover-steps">
+          <ul class="home-cover-steps__list">
+            <li class="home-cover-steps__item">
+              <i class="home-cover-steps__icon icon icon--flag"></i>
+              <p class="home-cover-steps__desc">Tell Us About
+                                                Your Business</p>
+            </li>
+
+            <li class="home-cover-steps__item">
+              <i class="home-cover-steps__icon icon icon--search"></i>
+              <p class="home-cover-steps__desc">We Find You
+                                                The Best Policies</p>
+            </li>
+
+            <li class="home-cover-steps__item">
+              <i class="home-cover-steps__icon icon icon--refresh"></i>
+              <p class="home-cover-steps__desc">Buy Instantly</p>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </section>
+
+  <section class="section section--lead section--filled">
+    <div class="container">
+      <div class="slider" data-slick="partners">
+        <div class="slider__item">
+          {{ picture("QBE", "home-partner-slider__slide", "/img/home/partners/qbe", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Tokio Marine HCC", "home-partner-slider__slide", "/img/home/partners/tokiomarine", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Chubb Limited", "home-partner-slider__slide", "/img/home/partners/chubb", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("AXA Group", "home-partner-slider__slide", "/img/home/partners/axa", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Liberty Mutual Insurance", "home-partner-slider__slide", "/img/home/partners/liberty", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("QBE", "home-partner-slider__slide", "/img/home/partners/qbe", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Tokio Marine HCC", "home-partner-slider__slide", "/img/home/partners/tokiomarine", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Chubb Limited", "home-partner-slider__slide", "/img/home/partners/chubb", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("AXA Group", "home-partner-slider__slide", "/img/home/partners/axa", "png") }}
+        </div>
+        <div class="slider__item">
+          {{ picture("Liberty Mutual Insurance", "home-partner-slider__slide", "/img/home/partners/liberty", "png") }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Benefits</h2>
+
+      <div class="section__content benefits">
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Amazing Prices", "benefits__item-img", "/img/home/benefits/home__benefit-1", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Amazing Prices</h3> 
+              <p class="benefits__item-desc">Immediately get your insurance quotation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Instant Coverage", "benefits__item-img", "/img/home/benefits/home__benefit-2", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Instant Coverage</h3> 
+              <p class="benefits__item-desc">All your insurance needs in one online environment</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefits__item">
+          <div class="benefits__item-icon">
+            <i class="icon icon--circle icon--check-circle icon--bg-blue"></i>
+          </div>
+
+          <div class="benefits__item-wrap">
+            <div class="benefits__item-img-wrap">
+              {{ picture("Incredible Service", "benefits__item-img", "/img/home/benefits/home__benefit-3", "jpg") }}
+            </div>
+
+            <div class="benefits__item-content">
+              <h3 class="benefits__item-title">Incredible Service</h3> 
+              <p class="benefits__item-desc">Easy decision and buying process</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled">
+    <div class="container">
+      <h2 class="section__subtitle">Products</h2>
+      <p class="section__title">Most Common Insurance Products
+                                  for business owners</p>
+
+      <div class="section__content iconic-block-group">
+        {% set iconicGroup1 = [
+          { icon: 'lifebelt', label: 'Marine Cargo' },
+          { icon: 'earth', label: 'Travel' },
+          { icon: 'home', label: 'Property' },
+          { icon: 'chart', label: 'Commercial\n Auto Insurance' },
+          { icon: 'cyber', label: 'Cyber Insurance' },
+          { icon: 'receipt', label: 'Work Injury\n Compensation' },
+          { icon: 'list', label: 'General Liability\n insurance' },
+          { icon: 'flag-blue', label: 'Fidelity Guarantee\n Insurance' },
+          { icon: 'card', label: 'Trade Credit\n Insurance' }
+        ] %}
+
+        {% for item in iconicGroup1 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Contact Your personal Advisor</h2>
+
+      <div class="section__content contact-card">
+        <div class="contact-card__body">
+          <div class="contact-card__content">
+            <h3 class="contact-card__title">Highly skilled adbisor
+                                              dedicated to know you need</h3>
+
+            <div class="contact-card__contacts">
+              <span class="contact-card__contacts-label">Free advice:</span>
+
+              <a href="tel:+862423223927" class="contact-card__contacts-item contact-link" title="Call +(86 24) 2322 39 27">
+                <i class="icon icon--phone"></i>
+                <span class="topbar__link-label">+(86 24) 2322 39 27</span>
+              </a>
+
+              <a href="mailto:insur-asia@gmail.com" class="contact-card__contacts-item contact-link" title="Call +(86 24) 2322 39 27">
+                <i class="icon icon--envelope"></i>
+                <span class="topbar__link-label">insur-asia@gmail.com</span>
+              </a>
+
+              <button class="contact-card__contacts-item button button--white button--outline button--uppercase button--lg">
+                <span>Go to chat</span>
+                <i class="icon icon--right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled">
+    <div class="container">
+      <h2 class="section__subtitle">Segments</h2>
+      <p class="section__title">Industry specific offers by Segments</p>
+
+      <div class="section__content iconic-block-group">
+        {% set iconicGroup2 = [
+          { icon: 'briefcase', label: 'Raw materials\n supplier' },
+          { icon: 'bull-horn', label: 'Manufacturer' },
+          { icon: 'rotate-axis', label: 'Wholesaler' },
+          { icon: 'price-tag', label: 'Retailer' },
+          { icon: 'user', label: 'User' }
+        ] %}
+
+        {% for item in iconicGroup2 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Why Business like us</h2>
+      <p class="section__desc">Our mission is to make insurance more accesible to business owners. Every Business owner needs to do informed and optimizied descision.</p>
+
+      <div class="section__content slider slider--has-divider" data-slick="reviews">
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/2", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="slider__item">
+          <blockquote class="review">
+            <p class="review__text">
+              Owner of Business xx I never had such a good isnurance buying experience
+            </p>
+            <footer class="review__footer">
+              <div class="review__img-wrap">
+                {{ picture("Jemee Lee", "review__img", "/img/home/reviews/1", "jpg") }}
+              </div>
+              <cite class="review__author">
+                <span class="review__author-name">Jemee Lee</span>
+                <span class="review__author-position">CEO, Tokiomarine</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--filled section--last">
+    <div class="container">
+      <h2 class="section__title">Manage your Business insurance</h2>
+
+      <div class="section__content iconic-block-group">
+        {% set iconicGroup3 = [
+          { icon: 'eye', label: 'See your quotes' },
+          { icon: 'check-circle-blue', label: 'See your insurances' },
+          { icon: 'piggy-bank', label: 'See your invoicies' },
+          { icon: 'note', label: 'File a claim' }
+        ] %}
+
+        {% for item in iconicGroup3 %}
+          <div class="iconic-block">
+            <span class="iconic-block__icon">
+              <i class="icon icon--{{ item.icon }}"></i>
+            </span>
+
+            <span class="iconic-block__label">{{ item.label | e }}</span>
+            
+            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+              <span>Get a quote</span>
+              <i class="icon icon--right-dark"></i>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <a href="/login" class="section__button button button--primary button--outline button--lg">My account log in</a>
+    </div>
+  </section>
 {% endblock %}

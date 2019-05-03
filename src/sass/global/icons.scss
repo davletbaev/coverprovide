@@ -1,4 +1,6 @@
-$icons-map: email, lock, error;
+$icons-map: email, lock, error, phone, up, flag, search, refresh, right, right-dark, check-circle,
+  lifebelt, earth, home, chart, cyber, receipt, list, flag-blue, card, briefcase, bull-horn,
+  rotate-axis, price-tag, user, eye, check-circle-blue, piggy-bank, note, envelope, dollar;
 
 @mixin icons {
 	@each $icon in $icons-map {
@@ -9,6 +11,7 @@ $icons-map: email, lock, error;
 }
 
 .icon {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 1em;
@@ -25,6 +28,23 @@ $icons-map: email, lock, error;
   background-color: $bg-icon;
   background-size: 1em;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon--bg-blue {
+  background-color: transparent;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(124.44deg, #3F46E3 23.45%, #69FFD2 138.71%);
+  }
 }
 
 @include icons

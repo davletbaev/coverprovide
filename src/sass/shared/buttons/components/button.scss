@@ -1,17 +1,33 @@
 .button {
+  display: inline-flex;
+  align-items: center;
   background: none;
   box-shadow: none;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 2.25em;
   height: 2.25em;
   padding: 0 1em;
   border-radius: 6px;
-  border: 1px solid transparent;
+  border: 1.4px solid transparent;
   cursor: pointer;
+
+  & .icon {
+    &:first-child {
+      margin-right: 0.625em;
+    }
+
+    &:last-child {
+      margin-left: 0.625em;
+    }
+  }
 
   &:focus {
     outline: none;
+  }
+
+  @include media("<768px") {
+    font-size: 0.8rem;
   }
 }
 
@@ -26,4 +42,13 @@
 
 .button--outline {
   border-color: currentColor;
+}
+
+.button--uppercase {
+  text-transform: uppercase;
+}
+
+.button--block {
+  display: block;
+  width: 100%;
 }

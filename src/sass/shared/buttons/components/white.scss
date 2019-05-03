@@ -1,0 +1,14 @@
+.button--white {
+  color: $text-dark;
+  background: $bg-white;
+
+  &:hover,
+  &:focus {
+    background: rgba($bg-white, .7);
+  }
+
+  &.button--outline {
+    color: $text-white;
+    background: none;
+  }
+}

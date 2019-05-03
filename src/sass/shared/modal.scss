@@ -1,0 +1,21 @@
+.modal {
+  max-width: 400px;
+  
+  &__label {
+    margin-top: 0;
+    margin-bottom: 1em; 
+    max-width: 13em;
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .control__label {
+    font-size: 0.875em;
+  }
+
+  @include media("<=425px") {
+    &__label {
+      font-size: 1em;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.25em;
+  background-color: #314CAA;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 3.125em;
+    }
+  }
+
+  &__link.contact-link {
+    font-size: 1em;
+  }
+
+  @include media("<768px") {
+    display: none;
+    top: auto;
+    bottom: 0;
+
+    &__container {
+      justify-content: center;
+    }
+
+    .hidden--mobile {
+      display: none;
+    }
+  }
+
+  @include media("<=425px") {
+    &__container {
+      justify-content: flex-start;
+    }
+  }
+}
