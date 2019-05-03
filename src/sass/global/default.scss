@@ -16,6 +16,8 @@ body {
 body {
   min-height: 100vh;
   color: $text-dark;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
