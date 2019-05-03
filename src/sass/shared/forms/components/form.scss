@@ -29,4 +29,14 @@
       color: $color-primary
     }
   }
+
+  &__caption {
+    margin: 0;
+    font-size: 0.875em;
+    color: $text-dark-2;
+
+    & + .button {
+      margin-left: 4em;
+    }
+  }
 }

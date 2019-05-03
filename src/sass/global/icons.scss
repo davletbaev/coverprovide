@@ -1,6 +1,7 @@
 $icons-map: email, lock, error, phone, up, flag, search, refresh, right, right-dark, check-circle,
   lifebelt, earth, home, chart, cyber, receipt, list, flag-blue, card, briefcase, bull-horn,
-  rotate-axis, price-tag, user, eye, check-circle-blue, piggy-bank, note, envelope, dollar;
+  rotate-axis, price-tag, user, eye, check-circle-blue, piggy-bank, note, envelope, dollar, info,
+  success-white, success-green;
 
 @mixin icons {
 	@each $icon in $icons-map {
@@ -45,6 +46,14 @@ $icons-map: email, lock, error, phone, up, flag, search, refresh, right, right-d
     z-index: -1;
     background-image: linear-gradient(124.44deg, #3F46E3 23.45%, #69FFD2 138.71%);
   }
+}
+
+.icon--bg-green {
+  background-color: #E5F5EF;
+}
+
+.icon--shadow {
+  box-shadow: 0px 0.5em 1.25em rgba(40, 42, 86, 0.06);
 }
 
 @include icons

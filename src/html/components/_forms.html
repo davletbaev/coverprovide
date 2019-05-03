@@ -45,3 +45,15 @@
     </span>
   </label>
 {% endmacro %}
+
+{% macro textarea(label, name, placeholder, isRequired=false, isDisabled=false) %}
+  <label class="control control--textarea">
+    {% if label %}
+      <span class="control__label">{{ label }}</span>
+    {% endif %}
+
+    <span class="control__wrapper">
+      <textarea class="control__input" name="{{ name }}" placeholder="{{ placeholder }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} rows="10" cols="5" value=""></textarea>
+    </span>
+  </label>
+{% endmacro %}

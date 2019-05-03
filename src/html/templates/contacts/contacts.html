@@ -1,0 +1,131 @@
+{% extends "layouts/_base.html" %}
+
+{% from "components/_forms.html" import field, textarea %}
+
+{% set title = "Insure SME / Contact Us" %}
+{% set headerIsWhite = true %}
+
+{% block content %}
+  <section class="cover cover--full">
+    <div class="cover__container container">
+      <div class="cover__item">
+          <h1 class="cover__title">Contact us</h1>
+          <p class="cover__desc">Highly skilled advisor
+                                  dedicated to know you need</p>
+          <a href="#" class="button button--white button--outline button--lg button--uppercase">
+            <span>Go to chat</span>
+            <i class="icon icon--right"></i>
+          </a>
+
+          <div class="contacts-cover-info">
+            <div class="contacts-cover-info__item">
+              <span class="contacts-cover-info__label">Call us on</span>
+              <a href="tel:+6581008228" class="contacts-cover-info__link">+65 8100 8228</a>
+            </div>
+
+            <div class="contacts-cover-info__item">
+              <span class="contacts-cover-info__label">Email us on</span>
+              <a href="mailto:enquiry@insur-asia.com" class="contacts-cover-info__link">enquiry@insur-asia.com</a>
+            </div>
+
+            <div class="contacts-cover-info__item">
+              <span class="contacts-cover-info__label">We are located at</span>
+              <a href="https://goo.gl/maps/zhQFqKGSMsK6hQdc6" target="_blank" class="contacts-cover-info__link">113A Upper Paya Lebar 
+Road Singapore 534832</a>
+            </div>
+          </div>
+      </div>
+
+      <div class="cover__item">
+        <div class="contacts-cover-card">
+          <div class="contacts-cover-card__body"> {#  to hide: .contacts-cover-card__body--invisible #}
+            <h3 class="contacts-cover-card__title contacts-cover-card__title--with-icon">
+              <i class="contacts-cover-card__title-icon icon icon--info icon--circle"></i>
+              <span class="contacts-cover-card__title-text">Get in touch today.
+                                                          We are only an email or call away.</span>
+            </h3>
+
+            <form class="login__form form" action="/" method="POST">
+              <div class="form__group form__group--row">
+                {{ field('Name', type="text", 'name', isRequired=true) }}
+                {{ field('Number', type="tel", 'number', isRequired=true) }}
+              </div>
+
+              <div class="form__group">
+                {{ field('Email', type="email", 'email', isRequired=true) }}
+              </div>
+
+              <div class="form__group">
+                {{ textarea('Message','message', isRequired=true) }}
+              </div>
+
+              <div class="form__group form__group--last form__group--row">
+                <p class="form__caption">
+                  You agree by submitting this form,
+                  we will be processing your data in accordance to our privacy policy.
+                  Thank you.
+                </p>
+
+                <button class="button button--primary button--wide button--uppercase" type="submit">SEND</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="contacts-cover-card__body contacts-cover-card__body--hidden">
+            <div class="contacts-cover-card__icon">
+              <i class="icon icon--success-white icon--circle icon--bg-blue icon--with-shadow"></i>
+            </div>
+
+            <h3 class="contacts-cover-card__title">
+              <span class="contacts-cover-card__title-text">Please provide some criteria 
+                                                            for SME Package:</span>
+            </h3>
+
+            <p class="contacts-cover-card__desc">Owner of Business xx I never had such
+                                                a good insurance buying experience</p>
+
+            <div class="contacts-cover-card__action">
+              <a href="#" class="contacts-cover-card__action-link">Do you have but yo?</a>
+            </div>
+          </div>
+
+          <div class="contacts-cover-card__body contacts-cover-card__body--hidden">
+            <div class="contacts-cover-card__icon">
+              <i class="icon icon--error icon--circle icon--with-shadow"></i>
+            </div>
+
+            <h3 class="contacts-cover-card__title">
+              <span class="contacts-cover-card__title-text">Please provide some criteria 
+                                                            for SME Package:</span>
+            </h3>
+
+            <p class="contacts-cover-card__desc">Owner of Business xx I never had such
+                                                a good insurance buying experience</p>
+
+            <div class="contacts-cover-card__action">
+              <button type="button" class="contacts-cover-card__action-btn button button--primary button--uppercase button--wide">Send</button>
+            </div>
+          </div>
+
+          <div class="contacts-cover-card__body contacts-cover-card__body--hidden">
+            <div class="contacts-cover-card__icon">
+              <i class="icon icon--success-green icon--circle icon--bg-green icon--with-shadow"></i>
+            </div>
+
+            <h3 class="contacts-cover-card__title">
+              <span class="contacts-cover-card__title-text">Please provide some criteria 
+                                                            for SME Package:</span>
+            </h3>
+
+            <p class="contacts-cover-card__desc">Owner of Business xx I never had such
+                                                a good insurance buying experience</p>
+
+            <div class="contacts-cover-card__action">
+              <a href="#" class="contacts-cover-card__action-link">Do you have but yo?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
