@@ -1,8 +1,9 @@
 .breadcrumbs {
   list-style: none;
   display: flex;
+  align-items: center;
   font-size: 1rem;
-  padding: 1.25em 0;
+  padding: 1rem 0;
   margin: 0;
 
   &__item {
@@ -15,7 +16,7 @@
         content: '';
         position: absolute;
         right: -1.1em;
-        top: 57%;
+        top: 50%;
         transform: translate(50%,-50%);
         display: inline-block;
         width: 0.3125em;
@@ -29,6 +30,8 @@
   }
 
   &__link {
+    display: inline-block;
+    padding: 0.25rem 0;
     color: $text-dark-2;
     border-bottom-color: transparent;
 
@@ -43,6 +46,11 @@
     margin: 0;
     font-size: 1em;
     font-weight: normal;
+  }
+
+  @include media("<768px") {
+    font-size: 0.8rem;
+    flex-wrap: wrap;
   }
 
   @media print {
