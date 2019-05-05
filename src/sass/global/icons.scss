@@ -1,7 +1,7 @@
-$icons-map: email, lock, error, phone, up, flag, search, refresh, right, right-dark, check-circle,
-  lifebelt, earth, home, chart, cyber, receipt, list, flag-blue, card, briefcase, bull-horn,
+$icons-map: email, lock, error, phone, up, flag, search, refresh, right, right-dark, right-blue,
+  check-circle, lifebelt, earth, home, chart, cyber, receipt, list, flag-blue, card, briefcase, bull-horn,
   rotate-axis, price-tag, user, eye, check-circle-blue, piggy-bank, note, envelope, dollar, info,
-  success-white, success-green, download;
+  success-white, success-green, download, laptop, money-bill, car;
 
 @mixin icons {
 	@each $icon in $icons-map {
