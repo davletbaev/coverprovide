@@ -1,0 +1,69 @@
+{% extends "layouts/_base.html" %}
+
+{% set title = "Insure SME" %}
+{% set headerIsWhite = true %}
+
+{% block content %}
+  <section class="cover">
+    <div class="cover__container container">
+      <h1 class="cover__title">Types of Insurance</h1>
+      <p class="cover__desc">Our mission is to make insurance more accesible to business owners.
+                          Every Business owner needs to do informed and optimizied descision.</p>
+
+      <div class="types-cover-cards">
+        <div class="types-card">
+          <div class="types-card__icon">
+            <i class="icon icon--laptop"></i>
+          </div>
+
+          <h3 class="types-card__title">What Commercial Auto Insurance Is All About</h3>
+          <p class="types-card__desc">
+            Whether be it a single vehicle 
+            or a commercial fleet...
+          </p>
+
+          <a href="/types-inner.html" class="types-card__link">
+            <span>Learn more</span>
+            <i class="icon icon--right-blue"></i>
+          </a>
+        </div>
+
+        <div class="types-card">
+          <div class="types-card__icon">
+            <i class="icon icon--laptop"></i>
+          </div>
+
+          <h3 class="types-card__title">What Cyber Liability Insurance Is All About</h3>
+          <p class="types-card__desc">
+            Cyber Incidents are not just 
+            targeted to large...
+          </p>
+
+          <a href="/types-inner.html" class="types-card__link">
+            <span>Learn more</span>
+            <i class="icon icon--right-blue"></i>
+          </a>
+        </div>
+
+        <div class="types-card">
+          <div class="types-card__icon">
+            <i class="icon icon--money-bill"></i>
+          </div>
+
+          <h3 class="types-card__title">What Workers Compensation Insurance Is All About</h3>
+          <p class="types-card__desc">
+            Workers Injury Compensation 
+            (WIC) insurance is meant...
+          </p>
+
+          <a href="/types-inner.html" class="types-card__link">
+            <span>Learn more</span>
+            <i class="icon icon--right-blue"></i>
+          </a>
+        </div>
+      </div>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true, margin="lg") }}
+{% endblock %}

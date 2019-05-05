@@ -1,5 +1,5 @@
-{% macro contactCard(isLast) %}
-  <section class="section {% if isLast %}section--last{% endif %}">
+{% macro contactCard(isLast, margin) %}
+  <section class="section {% if isLast %}section--last{% endif %} {% if margin %}section--margin-{{ margin }}{% endif %}">
     <div class="container">
       <h2 class="section__title">Contact Your personal Advisor</h2>
 
