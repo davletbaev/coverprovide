@@ -1,0 +1,120 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Insure SME / Types of Insurance" %}
+{% set headerIsWhite = lfase %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs(['Types of Issurance', 'What Commercial Auto Insurance Is All About']) }}
+    </nav>
+  </section>
+
+  <section class="outer-section container">
+    {{ picture("About us", "outer-section__img outer-section__img--right", "/img/about/cover", "jpg") }}
+    <h1>About us</h1>
+    <p>We are a dynamic online insurance broker that is transforming the very business model of insurance. We are the 1st online insurance platform in Singapore solely dedicated to serve all the insurance needs of small and medium business owners.</p>
+    <p>We hope to create an awesome experience that is fast, affordable and hassle-free.</p>
+  </section>
+
+  <section class="outer-section container">
+    <h2>How are we different from the traditional insurance brokers ?</h2>
+    <p>We are build differently. Our advanced technologically driven online insurance platform allow business owners to dynamically compare price and product features over an extensive range of commercial insurance products and to instantaneously purchase their desired insurance solutions.</p>
+    <p>We feature within our platform a comprehensive range of commercial insurance products. This way, business owners will enjoy savings without the inefficiencies associated with the traditional insurance business model.</p>
+  </section>
+
+  <section class="section container">
+    <h2 class="section__subtitle">Products</h2>
+    <p class="section__title">Meet the Founders</p>
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Fong Khai Hin", "founder-card__img", "/img/about/team/fong-khai-hin", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Fong Khai Hin</h3>
+        <p class="founder-card__position">CEO & CTO</p>
+        <p class="founder-card__bio">Mr. Fong Khai Yin is the company’s CEO & CTO. An accomplished IT veteran with almost 36 years of experience, he previously served as CTO of SQL View Pte Ltd from 2006 to 2016. He served as CTO of Singapore Computer Systems Ltd (previously listed on Singapore Stock Exchange) from 1987 to 2005. He founded and served as CEO of an e-Procurement company called TX123 from 2003 to 2005. He co-founded Trusted Hub in 2001. He has a patent US 20060212708 A9 filed in 2004.</p>
+      </div>
+    </div>
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Ang Wee Hui", "founder-card__img", "/img/about/team/ang-wee-hui", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Ang Wee Hui</h3>
+        <p class="founder-card__position">HEAD, GROUP SALES</p>
+        <p class="founder-card__bio">Mr. Ang Wee Hui, Jackson is the company’s Group Head of Sales. He served as Group Sales Director with Howden Insurance Pte Ltd from 2015 to 2017. He served as Business Development Manager with NCI Brokers (Asia) Pte Ltd from 2012 to 2015. He founded and led his own company CreditPixel from 2011-2012. He served as Manager of Trade Credit with Aeon from 2001 to 2011.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 class="section__subtitle">Products</h2>
+    <p class="section__title">Managements</p>
+
+    <div class="managements">
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 1", "manager-card__img", "/img/about/team/manager1", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 2", "manager-card__img", "/img/about/team/manager2", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 3", "manager-card__img", "/img/about/team/manager3", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 4", "manager-card__img", "/img/about/team/manager4", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 5", "manager-card__img", "/img/about/team/manager5", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+
+      <div class="manager-card">
+        <div class="manager-card__img-wrap">
+          {{ picture("Manager 6", "manager-card__img", "/img/about/team/manager6", "jpg", hasWebp=false) }}
+        </div>
+        <div class="founder-card__content">
+          <h3 class="founder-card__name">Jemee Lee</h3>
+          <p class="founder-card__position">CEO, Tokioamarine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

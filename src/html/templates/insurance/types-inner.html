@@ -1,4 +1,5 @@
 {% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
 
 {% set title = "Insure SME / Types of Insurance" %}
 {% set headerIsWhite = lfase %}
@@ -6,21 +7,7 @@
 {% block content %}
   <section class="section section--first">
     <nav class="container">
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">
-            Types of Issurance
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">
-            Types of Issurance
-          </a>
-        </li>
-        <li class="breadcrumbs__item">
-          <h1 class="breadcrumbs__current">What Commercial Auto Insurance Is All About</h1>
-        </li>
-      </ul>
+      {{ breadcrumbs(['Types of Issurance', 'What Commercial Auto Insurance Is All About']) }}
     </nav>
   </section>
 
