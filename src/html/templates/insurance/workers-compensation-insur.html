@@ -1,0 +1,75 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What Workers Compensation Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Types of Insurance', link: '/types-of-insur' },
+        { label: 'What Workers Compensation Insurance Is All About' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container inner-section--first">
+    <h2>What Workers Compensation Insurance Is All About:</h2>
+    <p>Workers Injury Compensation (WIC) insurance is meant to indemnify employers against your workers possible financial loss due to bodily injuries, illness during the course of work. In Singapore, it is a statutory requirement to provide for such insurance if your workers are doing manual work and/or all employees doing non-manual work, earning less than $1,600 a month.</p>
+    <p>WIC insurance usually extend cover to foot medical bills, lump sum compensation for Death or Total Permanent Disability situation, medical leave wages, etc.</p>
+    <p>As such, it provides employers with a peace of mind, knowing their most valuable asset (employees) welfare are being taken care of.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Is Workers Compensation Insurance?</h2>
+    <p>Workers’ compensation is a complex and sensitive area of insurance demanding expert service provision.</p>
+    <p>Workers’ compensation is complicated by the fact that it is partly governed by the Work Injury Compensation Act (WICA) and also by common law. Under the Act, the injured employee does not need to prove negligence on the part of the employer. The Act provides for indemnity in respect of medical leave wages, medical and hospital fees and compensation for permanent disability.</p>
+    <p>Despite employee’s welfare is taken care of by common law, both employer & employee will often be embroiled in a long & expensive litigation process if they so choose to exercise their rights under WICA. For such cases, the employee will not gain access to medical benefits until the case is closed.</p>
+    <p>Hence, WIC insurance provides for a speedy remedial solution to injured employees without the need for legal intervention.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does Workers Compensation Insurance Cover?</h2>
+    <p>WIC covers the employees for medical bills, death or Total permanent disability. In most cases, compensation for Wages, salaries and other monetary earnings components will generally include salary, food and housing allowances, overtime payments, bonuses and annual wage components, excluding CPF contributions.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>You’ll Know It’s the Right Policy If It Covers:</h2>
+    
+    <ul>
+      <li>High-hazard risk industries such as shipyard, offshore, scaffolding, diving, airline to low-hazard office risk</li>
+      <li>Occupations that requires a lot of manual labour. Example construction workers, renovation & Interior Designers, factory workers, delivery man, hawker or chefs, etc</li>
+      <li>Constant exposure to climate changes. Example farmers, on-site engineers, technicians, road works labourers, scaffolding workers, building painters, car wash employees, etc</li>
+    </ul>
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does Workers Compensation Insurance Not Cover?</h2>
+    <p>Self employed person, members of the Singapore Armed forces, Uniformed officer of the Singapore Police Force, Singapore Civil DefenceForce, Central Narcotics Bureau andSingapore Prisons Service. Pre-existing illnesses, non-work related accidents. Self inflicted injuries, injuries incurred as a result of conduct or actions that violate company policy.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Are the “Limits” on a Workers Compensation Insurance Policy?</h2>
+    <p>There is no limits as to how much should an employer cater for their workers. For statutory requirements, a minimum amount of:</p>
+
+    <ul>
+      <li>Death - $57,000</li>
+      <li>Permanent Disability - $73,000</li>
+      <li>Medical expenses – Up to $30,000, or 1 year from date of accidents , whichever is reached first</li>
+    </ul>
+  </section>
+
+  <section class="inner-section container">
+    <h2>How Much Does Workers Compensation Insurance Cost?</h2>
+    <p>The cost of insurance will greatly depend on various factors such as nature of job, industry type, occupational hazards, insurer’s claims history in that sector, deductibles, etc.</p>
+    <p>A large component of underwriting this risk relies heavily on the applicant. Whether they have a robust risk management procedure in place, or do they have a safety officer on site. Premiums will generally be cheaper if the applicant has a good track records of accident free history, or if they have obtained workplace safety certification from regulatory bodies (i.e. BCA workplace safety certification).</p>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}

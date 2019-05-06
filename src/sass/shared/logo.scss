@@ -10,8 +10,4 @@
   &:hover {
     opacity: 0.75;
   }
-
-  @include media("<768px") {
-    height: 2.15em;
-  }
 }

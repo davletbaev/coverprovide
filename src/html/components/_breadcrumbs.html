@@ -3,9 +3,9 @@
     {% for item in items %}
       <li class="breadcrumbs__item">
         {% if loop.last %}
-          <span class="breadcrumbs__current">{{ item }}</span>
+          <span class="breadcrumbs__current">{{ item.label }}</span>
         {% else %}
-          <a href="#" class="breadcrumbs__link">{{ item }}</a>
+          <a href="{{ item.link }}" class="breadcrumbs__link">{{ item.label }}</a>
         {% endif %}
       </li>
     {% endfor %}
