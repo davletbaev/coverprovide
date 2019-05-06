@@ -343,6 +343,34 @@
       float: left;
       margin-right: 4em;
     }
+
+    @include media("<1024px") {
+      &--right {
+        margin-left: 2em;
+        max-width: 50%;
+      }
+
+      &--left {
+        margin-right: 2em;
+        max-width: 50%;
+      }
+    }
+
+    @include media("<768px") {
+      &--right {
+        margin-left: 0;
+        margin-bottom: 2em;
+        float: none;
+        max-width: 100%;
+      }
+
+      &--left {
+        margin-right: 0;
+        margin-bottom: 2em;
+        float: none;
+        max-width: 100%;
+      }
+    }
   }
 
   @include media("<768px") {

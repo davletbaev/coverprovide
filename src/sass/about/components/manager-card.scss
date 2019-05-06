@@ -1,0 +1,57 @@
+.managements {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  padding-top: 1.5em;
+
+  @include media("<768px") {
+    font-size: 1rem;
+  }
+}
+
+.manager-card {
+  margin-top: 2em;
+  flex: 0 0 calc(100% / 3 - 2em / 3);
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+
+    &-wrap {
+      position: relative;
+      padding-bottom: 97%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 3px 3px 0 0;
+    }
+  }
+
+  &__content {
+    margin-top: 1.5em;
+    line-height: 1.5;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  &__position {
+    margin-top: 0.4em;
+    font-size: 1.1em;
+    color: $text-gray;
+  }
+
+  @include media("<768px") {
+    flex-basis: calc(100% / 2 - 2em / 2);
+  }
+
+  @include media("<=425px") {
+    margin-top: 3em;
+    flex-basis: 100%;
+  }
+}
