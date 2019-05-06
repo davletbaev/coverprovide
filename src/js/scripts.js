@@ -22,7 +22,7 @@ function initMobileNav() {
 }
 
 function initSliders() {
-  if ($('slider').length) {
+  if ($('.slider').length) {
     function createSlider(elem, options) {
       if (elem.hasClass('slick-initialized')) {
         elem.slick('unslick');
