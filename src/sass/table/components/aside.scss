@@ -1,0 +1,50 @@
+.aside {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1em 0.5em;
+  background: #fff;
+  box-shadow: 0px 4px 20px rgba(7, 6, 37, 0.1);
+  z-index: 100;
+  overflow: hidden;
+  transform: translateX(-50px);
+  transition: visibility ease-in-out 0.2s, transform ease-in-out 0.2s;
+
+  &__button {
+    margin-bottom: 10px;
+    width: 29px;
+    height: 29px;
+    padding: 0;
+    border-radius: 6px;
+    background: $bg-gray;
+    border: 0;
+    box-shadow: none;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
+
+    .icon {
+      font-size: 1.5em;
+    }
+  }
+
+  @include media("<1024px") {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+body.open-search,
+body.open-sort {
+  .aside {
+    visibility: hidden;
+    transform: translateX(-50px);
+  }
+}

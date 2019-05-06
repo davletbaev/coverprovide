@@ -37,7 +37,7 @@
           <i class="icon icon--{{ icon }}"></i>
         </span>
       {% endif %}
-      <select data-select type="select" name="{{ name }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} {% if isMulti %}multiple="{{ isMulti }}"{% endif %}>
+      <select class="control__select" data-select type="select" name="{{ name }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} {% if isMulti %}multiple="{{ isMulti }}"{% endif %}>
         {% for option in options %}
           <option value="{{ option.value }}">{{ option.label }}</option>
         {% endfor %}
@@ -54,6 +54,42 @@
 
     <span class="control__wrapper">
       <textarea class="control__input" name="{{ name }}" placeholder="{{ placeholder }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} rows="10" cols="5" value=""></textarea>
+    </span>
+  </label>
+{% endmacro %}
+
+{% macro numeric(label, name, placeholder, isRequired, isDisabled, size="md", min, max, step, caption, units) %}
+  <label class="control control--numeric control--{{size}}" data-numeric>
+    {% if label %}
+      <span class="control__label">{{ label }}</span>
+    {% endif %}
+
+    <span class="control__wrapper">
+      <input
+        class="control__input"
+        type="number"
+        name="{{ name }}"
+        placeholder="{{ placeholder }}"
+        {% if isRequired %}required="{{ isRequired }}"{% endif %}
+        {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %}
+        {% if min %}min="{{ min }}"{% endif %}
+        {% if max %}max="{{ max }}"{% endif %}
+        {% if step %}step="{{ step }}"{% endif %}
+      >
+
+      <button type="button" class="control__btn control__btn--subtract" data-subtract></button>
+      <button type="button" class="control__btn control__btn--add" data-add></button>
+      <button type="button" class="control__btn control__btn--clear" data-clear></button>
+    </span>
+
+    <span class="control__footer">
+      {% if units %}
+        <span class="control__caption">{{ units }}</span>
+      {% endif %}
+
+      {% if caption %}
+        <span class="control__caption">{{ caption }}</span>
+      {% endif %}
     </span>
   </label>
 {% endmacro %}

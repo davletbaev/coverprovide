@@ -15,6 +15,23 @@
       margin-top: 2.5em;
     }
 
+    &--with-divider {
+      position: relative;
+      margin-right: 1.875em;
+      padding-right: 1.875em;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 1px;
+        height: 2.25em;
+        background: rgba(91, 91, 116, 0.2);
+      }
+    }
+
     &:first-child {
       margin-top: 0;
     }
@@ -37,6 +54,21 @@
 
     & + .button {
       margin-left: 4em;
+    }
+  }
+
+  &--inline {
+    display: flex;
+    align-items: flex-end;
+
+    .form__group {
+      margin-top: 0;
+      margin-left: 1em;
+      flex: 1 1 0;
+
+      &--with-divider + .form__group {
+        margin-left: 0;
+      }
     }
   }
 }
