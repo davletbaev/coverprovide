@@ -1,14 +1,7 @@
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
 <header class="header header--invoice">
   <nav class="header__container container">
-    <ul class="breadcrumbs">
-      <li class="breadcrumbs__item">
-        <a href="#" class="breadcrumbs__link">
-          Offer
-        </a>
-      </li>
-      <li class="breadcrumbs__item">
-        <h1 class="breadcrumbs__current">Invoice №23131</h1>
-      </li>
-    </ul>
+    {{ breadcrumbs(['Offer', 'Invoice №23131']) }}
   </nav>
 </header>

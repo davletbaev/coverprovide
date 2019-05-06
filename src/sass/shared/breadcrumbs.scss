@@ -43,7 +43,9 @@
   }
 
   &__current {
+    display: inline-block;
     margin: 0;
+    padding: 0.25rem 0;
     font-size: 1em;
     font-weight: normal;
   }

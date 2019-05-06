@@ -1,0 +1,79 @@
+.founder-card {
+  margin-top: 5em;
+  display: flex;
+  font-size: 1.25em;
+  line-height: 1.5;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    
+    &-wrap {
+      max-width: 350px;
+      width: 100%;
+      flex: 0 0 auto;
+    }
+  }
+
+  &__content {
+    margin-left: 5em;
+    text-align: left;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.33;
+  }
+
+  &__position {
+    margin-top: 0.4em;
+    text-transform: uppercase;
+    color: $text-dark-2;
+  }
+
+  &__bio {
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: $text-dark-2;
+
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .founder-card__content {
+      margin-left: 0;
+      margin-right: 5em;
+    }
+  }
+
+  @include media("<768px") {
+    flex-direction: column;
+
+    &__img {
+      &-wrap {
+        margin: 0 auto;
+      }
+    }
+
+    &__content {
+      text-align: center;
+      margin-top: 2em;
+      margin-left: 0;
+    }
+
+    &__bio {
+      text-align: left;
+    }
+
+    &:nth-child(even) {
+      flex-direction: column;
+  
+      .founder-card__content {
+        margin-right: 0;
+        margin-top: 2em;
+      }
+    }
+  }
+}
