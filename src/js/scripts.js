@@ -3,6 +3,8 @@ $(document).ready(() => {
   initSelects()
   initSliders()
   initResizeWatcher()
+  initTableLayout()
+  initNumericFields()
 })
 
 function initMobileNav() {
@@ -20,44 +22,47 @@ function initMobileNav() {
 }
 
 function initSliders() {
-  function createSlider(elem, options) {
-    if (elem.hasClass('slick-initialized')) {
-      elem.slick('unslick');
+  if ($('slider').length) {
+    function createSlider(elem, options) {
+      if (elem.hasClass('slick-initialized')) {
+        elem.slick('unslick');
+      }
+  
+      let defaultOptions = {
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        variableWidth: false,
+        ...options
+      }
+  
+      elem.slick(defaultOptions)
     }
-
-    let defaultOptions = {
-      prevArrow: '<button type="button" class="slick-prev"></button>',
-      nextArrow: '<button type="button" class="slick-next"></button>',
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      variableWidth: false,
-      ...options
-    }
-
-    elem.slick(defaultOptions)
+  
+    window.addEventListener('changeDeviceType', (e) => {
+      const partnersSlider = $('[data-slick="partners"]')
+      const reviewsSlider = $('[data-slick="reviews"]')
+  
+      if (e.detail.device === 'desktop') {
+        createSlider(partnersSlider, { slidesToShow: 5, slidesToScroll: 5, variableWidth: true, centerMode: false })
+        createSlider(reviewsSlider, { slidesToShow: 2, slidesToScroll: 2, variableWidth: false })
+      } else if (e.detail.device === 'tablet') {
+        createSlider(partnersSlider, { slidesToShow: 3, slidesToScroll: 3, variableWidth: true, centerMode: true })
+        createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
+      } else {
+        createSlider(partnersSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: true, centerMode: true })
+        createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
+      }
+    })
   }
-
-  window.addEventListener('changeDeviceType', (e) => {
-    const partnersSlider = $('[data-slick="partners"]')
-    const reviewsSlider = $('[data-slick="reviews"]')
-
-    if (e.detail.device === 'desktop') {
-      createSlider(partnersSlider, { slidesToShow: 5, slidesToScroll: 5, variableWidth: true, centerMode: false })
-      createSlider(reviewsSlider, { slidesToShow: 2, slidesToScroll: 2, variableWidth: false })
-    } else if (e.detail.device === 'tablet') {
-      createSlider(partnersSlider, { slidesToShow: 3, slidesToScroll: 3, variableWidth: true, centerMode: true })
-      createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
-    } else {
-      createSlider(partnersSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: true, centerMode: true })
-      createSlider(reviewsSlider, { slidesToShow: 1, slidesToScroll: 1, variableWidth: false })
-    }
-  })
 }
 
 function initSelects() {
   $('[data-select]').each(function() {
     $(this).select2({
-      minimumResultsForSearch: Infinity
+      minimumResultsForSearch: Infinity,
+      width: '100%'
     })
     $(this).on('select2:opening select2:closing', function( event ) {
       var $searchfield = $(this).parent().find('.select2-search__field');
@@ -93,4 +98,70 @@ function getDeviceType(width) {
   } else {
     return 'mobile'
   }
+}
+
+function initTableLayout() {
+  $('body').on('click', '[data-toggle]', function(e) {
+    e.preventDefault()
+
+    const target = $(this).data('toggle');
+    $('body').toggleClass(`open-${target}`);
+  })
+}
+
+function initNumericFields() {
+  const fields = $('[data-numeric]')
+
+  if (fields.length) {
+    fields.each(function() {
+      createNumericField(this);
+    })
+  }
+}
+
+const createNumericField = function(el) {
+  const input = $(el).find('input')[0]
+
+  const numericAdd = (e) => {
+    e.preventDefault()
+
+    let value = +input.value
+    const max = +input.getAttribute('max')
+    const step = +input.getAttribute('step')
+
+    value = value + step
+
+    if ((max !== undefined) && (value > max)) {
+      input.value = max
+    } else {
+      input.value = value
+    }
+  }
+
+  const numericSubtract = (e) => {
+    e.preventDefault()
+
+    let value = +input.value
+    const min = +input.getAttribute('min')
+    const step = +input.getAttribute('step')
+
+    value = value - step
+
+
+    if ((min !== undefined) && (value < min)) {
+      input.value = min
+    } else {
+      input.value = value
+    }
+  }
+
+  const numericClear = (e) => {
+    e.preventDefault()
+    
+    input.value = ''
+  }
+
+  $(el).on('click', '[data-add]', numericAdd)
+  $(el).on('click', '[data-subtract]', numericSubtract)
+  $(el).on('click', '[data-clear]', numericClear)
 }

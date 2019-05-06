@@ -1,4 +1,8 @@
 .control {
+  display: block;
+  min-width: 10em;
+  width: 100%;
+
   & + .control {
     margin-left: 1em;
   }
@@ -12,6 +16,7 @@
   }
 
   &__wrapper {
+    display: block;
     position: relative;
   }
 
@@ -22,6 +27,18 @@
     left: 0.9em;
     transform: translateY(-50%);
     line-height: 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+
+  }
+  
+  &__caption {
+    font-size: 0.875em;
+    color: $text-gray;
   }
 
   &__input {
@@ -45,10 +62,59 @@
     }
   }
 
+  &__select {
+    width: 100%;
+  }
+
   &__input:focus {
     outline: none;
     box-shadow: 0 0 0 1px #2B44DC;
   }
+
+  &--numeric #{&} {
+    &__input {
+      padding-left: 2.5em;
+      padding-right: 4.5em;
+      text-align: right;
+      background: #fff;
+      box-shadow: 0px 0px 1px rgba(11, 18, 36, 0.16), 0px 2px 6px rgba(9, 18, 48, 0.06);
+    }
+    
+    &__btn {
+      position: absolute;
+      top: 50%;
+      font-size: 1em;
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 6px;
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center center;
+      transform: translateY(-50%);
+      border: 0;
+      box-shadow: none;
+      cursor: pointer;
+
+      &--add {
+        background-color: $color-primary-3;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3E%3Cpath fill='%23fff' d='M7.458 6.5h5.271a.48.48 0 0 1 0 .958H7.46v5.271a.48.48 0 0 1-.959 0V7.46H1.23a.48.48 0 1 1 0-.959H6.5V1.23a.48.48 0 1 1 .958 0V6.5z'/%3E%3C/svg%3E");
+        right: 2.5em;
+      }
+
+      &--subtract {
+        background-color: $color-primary-3;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='2' fill='none'%3E%3Cpath fill='%23fff' d='M11.98.5H.48a.48.48 0 0 0 0 .958H11.978a.48.48 0 0 0 0-.958z'/%3E%3C/svg%3E");
+        left: 0.5em;
+      }
+
+      &--clear {
+        background-color: $color-gray;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='18' fill='none'%3E%3Cpath fill='%23fff' d='M9.23 8.301l3.726-3.727a.48.48 0 0 1 .678.678L9.907 8.979l3.727 3.727a.48.48 0 0 1-.678.678L9.23 9.657l-3.727 3.727a.48.48 0 0 1-.677-.678l3.727-3.727-3.727-3.727a.48.48 0 1 1 .677-.678L9.23 8.301z'/%3E%3C/svg%3E");
+        right: 0.5em;
+      }
+    }
+  }
+  
 
   &--textarea #{&}__input {
     height: 8.75em;

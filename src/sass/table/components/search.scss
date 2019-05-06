@@ -1,0 +1,39 @@
+.search {
+  margin: 0 auto;
+
+  @include media("<1024px") {
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+
+    .form--inline {
+      display: block;
+
+      .form__group {
+        margin: 0;
+        padding: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    .form__group {
+      &:not(:first-child) {
+        margin-top: 1.2em;
+      }
+    }
+
+    .button {
+      font-size: 1rem;
+    }
+  }
+}
+
+body.open-search {
+  .header--search {
+    visibility: visible;
+    opacity: 1;
+  }
+}
