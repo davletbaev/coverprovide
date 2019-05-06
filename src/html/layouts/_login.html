@@ -1,4 +1,5 @@
 {% from "components/_picture.html" import picture %}
+{% from "components/_logo.html" import logo %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +14,7 @@
   <main class="login">
     <section class="login__content">
       <div class="login__content-wrapper">
-        <div class="login__logo logo logo--standalone"> 
-          <a href="/" title="To Main page">
-            <img src="/img/logo/logo--dark.svg" alt="Insure SME">
-          </a>
-        </div>
+        {{ logo('login__logo') }}
         
         {% block content %}{% endblock %}
       </div>

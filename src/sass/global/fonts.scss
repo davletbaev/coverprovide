@@ -21,3 +21,9 @@
   font-weight: 700;
   src: local("Lato-Bold"), local("Lato Bold"), url("../fonts/Lato-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Caslon";
+  font-weight: 400;
+  src: local("Caslon-Regular"), local("Caslon Regular"), url("../fonts/Caslon.woff2") format("woff2"), url("../fonts/Caslon.woff") format("woff");
+}

@@ -1,8 +1,6 @@
 <header class="header {% if headerIsWhite %}header--white{% endif %}">
   <nav class="header__container container">
-    <a class="header__logo logo" href="/" title="To Main page">
-      <img class="logo__img" src="{% if headerIsWhite %}/img/logo/logo--white.svg{% else %}/img/logo/logo--dark.svg{% endif %}" alt="Insure SME">
-    </a>
+    {{ logo('header__logo') }}
 
     <button data-toggle="#modalNav" class="toggle">
       <span class="toggle__item toggle__item--first"></span>

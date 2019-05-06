@@ -12,7 +12,7 @@
         <p class="cover__desc">Comprehensive Coverage Designed
                                   for Business Owners</p>
         <a href="#quoteModal" rel="modal:open" class="button button--white button--outline button--lg">
-          <span>Get a free quote</span>
+          <span>Get A Free Quote</span>
           <i class="icon icon--right"></i>
         </a>
       </div>
@@ -40,7 +40,7 @@
             <li class="home-cover-steps__item">
               <i class="home-cover-steps__icon icon icon--search"></i>
               <p class="home-cover-steps__desc">We Find You
-                                                The Best Policies</p>
+                                              The Best Policies</p>
             </li>
 
             <li class="home-cover-steps__item">
@@ -106,7 +106,7 @@
 
             <div class="benefits__item-content">
               <h3 class="benefits__item-title">Amazing Prices</h3> 
-              <p class="benefits__item-desc">Immediately get your insurance quotation.</p>
+              <p class="benefits__item-desc">We get you the best value policies from over a dozen insurers.</p>
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@
 
             <div class="benefits__item-content">
               <h3 class="benefits__item-title">Instant Coverage</h3> 
-              <p class="benefits__item-desc">All your insurance needs in one online environment</p>
+              <p class="benefits__item-desc">Protect your business within minutes.</p>
             </div>
           </div>
         </div>
@@ -135,12 +135,12 @@
 
           <div class="benefits__item-wrap">
             <div class="benefits__item-img-wrap">
-              {{ picture("Incredible Service", "benefits__item-img", "/img/home/benefits/home__benefit-3", "jpg") }}
+              {{ picture("Expert Advice", "benefits__item-img", "/img/home/benefits/home__benefit-3", "jpg") }}
             </div>
 
             <div class="benefits__item-content">
-              <h3 class="benefits__item-title">Incredible Service</h3> 
-              <p class="benefits__item-desc">Easy decision and buying process</p>
+              <h3 class="benefits__item-title">Expert Advice</h3> 
+              <p class="benefits__item-desc">Our AI Broker system will customise insurance coverage to your unique needs.</p>
             </div>
           </div>
         </div>
@@ -151,8 +151,8 @@
   <section class="section section--filled">
     <div class="container">
       <h2 class="section__subtitle">Products</h2>
-      <p class="section__title">Most Common Insurance Products
-                                  for business owners</p>
+      <p class="section__title">Most common Insurance products
+                                for Business owners we have!</p>
 
       <div class="section__content iconic-block-group">
         {% set iconicGroup1 = [
@@ -175,7 +175,7 @@
 
             <span class="iconic-block__label">{{ item.label | e }}</span>
             
-            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+            <a href="#quoteModal" rel="modal:open" class="iconic-block__button button button--gray button--uppercase">
               <span>Get a quote</span>
               <i class="icon icon--right-dark"></i>
             </a>
@@ -198,9 +198,9 @@
           { icon: 'briefcase', label: 'Raw materials\n supplier' },
           { icon: 'bull-horn', label: 'Manufacturer' },
           { icon: 'rotate-axis', label: 'Wholesaler' },
-          { icon: 'price-tag', label: 'Retailer' },
-          { icon: 'user', label: 'User' }
+          { icon: 'price-tag', label: 'Retailer' }
         ] %}
+          {# { icon: 'user', label: 'End - user' } #}
 
         {% for item in iconicGroup2 %}
           <div class="iconic-block">
@@ -210,7 +210,7 @@
 
             <span class="iconic-block__label">{{ item.label | e }}</span>
             
-            <a href="#" class="iconic-block__button button button--gray button--uppercase">
+            <a href="#quoteModal" rel="modal:open" class="iconic-block__button button button--gray button--uppercase">
               <span>Get a quote</span>
               <i class="icon icon--right-dark"></i>
             </a>
@@ -333,11 +333,6 @@
             </span>
 
             <span class="iconic-block__label">{{ item.label | e }}</span>
-            
-            <a href="#" class="iconic-block__button button button--gray button--uppercase">
-              <span>Get a quote</span>
-              <i class="icon icon--right-dark"></i>
-            </a>
           </div>
         {% endfor %}
       </div>
