@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Gregor Raenok" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'Gregor Raenok' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Gregor Raenok", "founder-card__img", "/img/about/team/gregor-raenok", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Gregor Raenok</h3>
+        <p class="founder-card__position">Head of Marketing</p>
+        <p class="founder-card__bio">Mr. Gregor Raenok is marketing technologist of the company. He gets excited in defining new business models and innovate how do address customers, markets and channels.He is keen to Innovate new approach to information architecture on how people learn, understand and use daily applications and brands.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
