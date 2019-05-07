@@ -23,10 +23,21 @@
 }] %}
 
 
-<div class="hidden" id="quoteModal">
+<div class="hidden modal--quote" id="quoteModal">
   <p class="modal__label">Please provide some criteria for SME Package:</p>
 
   <form action="/" method="GET" class="modal__form form">
+    <div class="form__group form__group--row">
+      {{ field('Name', type="text", 'name', size="md", align="right") }}
+    </div>
+
+    <div class="form__group">
+      {{ field('Company Name', type="text", 'company_name', size="md", align="right") }}
+    </div>
+
+    <div class="form__group">
+      {{ field('Email Address', type="email", 'budget', icon="email", size="md", align="right") }}
+    </div>
     <div class="form__group">
       {{ select('Industry', 'industry', options=industryOptions, size="md") }}
     </div>
