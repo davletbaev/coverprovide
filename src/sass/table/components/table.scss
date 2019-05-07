@@ -65,8 +65,9 @@
     &:first-child {
       vertical-align: bottom;
       width: 100vw;
-      max-width: 0;
+      max-width: 45px;
       overflow: hidden;
+      will-change: transform, max-width;
       transition: transform ease-in-out 0.4s, max-width ease-in-out 0.4s;
     }
   }

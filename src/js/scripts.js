@@ -1,7 +1,7 @@
 $(document).ready(() => {
   objectFitImages()
-  initMobileNav()
   initSelects()
+  initMobileNav()
   initSliders()
   initResizeWatcher()
   initTableLayout()
@@ -58,19 +58,6 @@ function initSliders() {
       }
     })
   }
-}
-
-function initSelects() {
-  $('[data-select]').each(function() {
-    $(this).select2({
-      minimumResultsForSearch: Infinity,
-      width: '100%'
-    })
-    $(this).on('select2:opening select2:closing', function( event ) {
-      var $searchfield = $(this).parent().find('.select2-search__field');
-      $searchfield.prop('disabled', true);
-  });
-  })
 }
 
 function initResizeWatcher() {
@@ -166,4 +153,33 @@ const createNumericField = function(el) {
   $(el).on('click', '[data-add]', numericAdd)
   $(el).on('click', '[data-subtract]', numericSubtract)
   $(el).on('click', '[data-clear]', numericClear)
+}
+
+function initSelects() {
+  let timer;
+
+  $('select').on('change', function(e) {
+    const valContainer = $(this).siblings('[data-value-container]')
+    const selected = $(this).find(":selected")
+
+    let values = [];
+    selected.each(function() {
+      values.push(this.innerText)
+    })
+
+    console.log(valContainer)
+
+    valContainer.text(values.join(', '))
+  })
+
+  $('select').on('mouseenter', function(e) {
+    clearTimeout(timer)
+    this.focus()
+  })
+
+  $('select').on('mouseleave', function(e) {
+    timer = setTimeout(() => {
+      this.blur()
+    }, 400)
+  })
 }

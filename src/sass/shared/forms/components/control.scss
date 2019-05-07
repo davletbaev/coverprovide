@@ -41,15 +41,20 @@
     color: $text-gray;
   }
 
-  &__input {
+  &__input,
+  &__select {
+    display: block;
     width: 100%;
     padding: 0 0.9em;
     font-size: 1em;
-    color: $text-gray;
+    color: $text-dark-2;
     border: 0;
     resize: none;
     background: $bg-gray;
     border-radius: 0.375em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     &[type=number]::-webkit-inner-spin-button, 
     &[type=number]::-webkit-outer-spin-button { 
@@ -81,7 +86,81 @@
   }
 
   &__select {
-    width: 100%;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    padding: 0.55em 2em 0.55em 0.9em;
+
+    &::-ms-expand { 
+      display: none; /* hide the default arrow in ie10 and ie11 */
+    }
+
+    option {
+      padding: 0.55em 0.9em;
+    }
+
+    &:focus {
+      left: 0;
+      padding-right: 0.9em;
+      z-index: 2;
+      opacity: 1;
+      height: auto !important;
+      min-height: 100%;
+      width: auto;
+      min-width: 100%;
+
+      + .control__arrow {
+        display: none;
+      }
+    }
+
+    @include media("<768px") {
+      opacity: 1 !important;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 0.75em;
+    top: 50%;
+    display: block;
+    width: 12px;
+    height: 6px;
+    transform: translateY(-50%);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='none'%3E%3Cpath fill='%235B5B74' d='M6 4.262L10.762.181a.75.75 0 1 1 .976 1.138l-5.25 4.5a.75.75 0 0 1-.976 0l-5.25-4.5A.75.75 0 1 1 1.238.181L6 4.262z'/%3E%3C/svg%3E");
+  }
+
+
+  &--select {
+    &.control--md #{&} {
+      .control__input {
+        line-height: 2.25em;
+      }
+    }
+  
+    &.control--lg {
+      .control__input {
+        line-height: 2.875em;
+      }
+    }
+
+    .control__input {
+      padding: 0.55em 0.9em;
+      padding-right: 2em;
+      max-width: 100%;
+      z-index: 1;
+
+      @include media("<768px") {
+        opacity: 0;
+      }
+    }
   }
 
   &--numeric #{&} {
@@ -135,13 +214,15 @@
   }
 
   &--md #{&} {
-    &__input {
+    &__input,
+    &__select {
       height: 2.25em;
     }
   }
 
   &--lg #{&} {
-    &__input {
+    &__input,
+    &__select {
       height: 2.875em;
     }
   }

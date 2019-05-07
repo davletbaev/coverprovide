@@ -17,13 +17,12 @@
 
     &--with-divider {
       position: relative;
-      margin-right: 1.875em;
-      padding-right: 1.875em;
+      margin-right: 3.75em;
 
       &:after {
         content: '';
         position: absolute;
-        right: 0;
+        right: -1.875em;
         bottom: 0;
         display: block;
         width: 1px;
@@ -65,9 +64,14 @@
       margin-top: 0;
       margin-left: 1em;
       flex: 1 1 0;
+      max-width: 160px;
 
       &--with-divider + .form__group {
         margin-left: 0;
+      }
+
+      @include media("<1024px") {
+        max-width: none;
       }
     }
   }

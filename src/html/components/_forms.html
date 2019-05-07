@@ -26,7 +26,7 @@
 {% endmacro %}
 
 {% macro select(label, name, options, icon, isMulti=false, isRequired=false, isDisabled=false, size="md", default) %}
-  <label class="control control--{{size}}">
+  <label class="control control--{{size}} control--select {% if isMulti %}control--select-multiple{% endif %}">
     {% if label %}
       <span class="control__label">{{ label }}</span>
     {% endif %}
@@ -37,11 +37,23 @@
           <i class="icon icon--{{ icon }}"></i>
         </span>
       {% endif %}
-      <select class="control__select" {% if default %}{% else %}data-select{% endif %} type="select" name="{{ name }}" {% if isRequired %}required="{{ isRequired }}"{% endif %} {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %} {% if isMulti %}multiple="{{ isMulti }}"{% endif %}>
+      {# {% if isMulti %} #}
+        <span class="control__input" data-value-container></span>
+      {# {% endif %} #}
+      <select
+        class="control__select"
+        type="select"
+        name="{{ name }}"
+        size="{{ options.length }}"
+        {% if isRequired %}required="{{ isRequired }}"{% endif %}
+        {% if isDisabled %}disabled="{{ isDisabled }}"{% endif %}
+        {% if isMulti %}multiple="{{ isMulti }}"{% endif %}
+      >
         {% for option in options %}
           <option value="{{ option.value }}">{{ option.label }}</option>
         {% endfor %}
       </select>
+      <span class="control__arrow"></span>
     </span>
   </label>
 {% endmacro %}
