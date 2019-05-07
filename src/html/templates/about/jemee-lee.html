@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Jemee Lee" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'Jemee Lee' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Jemee Lee", "founder-card__img", "/img/about/team/jemee-lee", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Jemee Lee</h3>
+        <p class="founder-card__position">CTO, Tokiomarine</p>
+        <p class="founder-card__bio">Marketing Technologist. he gets excited in defining new business models and innovate how do address customers, markets and channels.He is keen to Innovate new approach to information architecture on how people learn, understand and use daily applications and brands.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

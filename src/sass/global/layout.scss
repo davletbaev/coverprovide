@@ -17,6 +17,10 @@
   }
 }
 
+.main {
+  flex: 1 0 auto;
+}
+
 .section {
   margin-top: 6.25em;
   font-size: 1rem;
@@ -225,7 +229,7 @@
   font-size: 1.25rem;
 
   &--first {
-    margin-top: 3em;
+    margin-top: 10em;
   }
 
   h1 {

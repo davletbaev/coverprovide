@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Fong Khai Hin" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'Fong Khai Hin' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Fong Khai Hin", "founder-card__img", "/img/about/team/fong-khai-hin", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Fong Khai Hin</h3>
+        <p class="founder-card__position">CEO & CTO</p>
+        <p class="founder-card__bio">Mr. Fong Khai Yin is the company’s CEO & CTO. An accomplished IT veteran with almost 36 years of experience, he previously served as CTO of SQL View Pte Ltd from 2006 to 2016. He served as CTO of Singapore Computer Systems Ltd (previously listed on Singapore Stock Exchange) from 1987 to 2005. He founded and served as CEO of an e-Procurement company called TX123 from 2003 to 2005. He co-founded Trusted Hub in 2001. He has a patent US 20060212708 A9 filed in 2004.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

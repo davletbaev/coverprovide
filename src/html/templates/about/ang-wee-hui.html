@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Ang Wee Hui, Jackson" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'Ang Wee Hui' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Ang Wee Hui", "founder-card__img", "/img/about/team/ang-wee-hui", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Ang Wee Hui, Jackson</h3>
+        <p class="founder-card__position">HEAD, GROUP SALES</p>
+        <p class="founder-card__bio">Mr. Ang Wee Hui, Jackson is the company’s Group Head of Sales. He served as Group Sales Director with Howden Insurance Pte Ltd from 2015 to 2017. He served as Business Development Manager with NCI Brokers (Asia) Pte Ltd from 2012 to 2015. He founded and led his own company CreditPixel from 2011-2012. He served as Manager of Trade Credit with Aeon from 2001 to 2011.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

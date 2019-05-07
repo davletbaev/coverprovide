@@ -5,16 +5,7 @@
 {% set headerIsWhite = lfase %}
 
 {% block content %}
-  <section class="section section--first">
-    <nav class="container">
-      {{ breadcrumbs([
-        { label: 'Types of Insurance', link: '/types-of-insur' },
-        { label: 'About us' }
-      ]) }}
-    </nav>
-  </section>
-
-  <section class="outer-section container">
+  <section class="outer-section container outer-section--first">
     {{ picture("About us", "outer-section__img outer-section__img--right", "/img/about/cover", "jpg") }}
     <h1>About us</h1>
     <p>We are a dynamic online insurance broker that is transforming the very business model of insurance. We are the 1st online insurance platform in Singapore solely dedicated to serve all the insurance needs of small and medium business owners.</p>
@@ -27,7 +18,7 @@
     <p>We feature within our platform a comprehensive range of commercial insurance products. This way, business owners will enjoy savings without the inefficiencies associated with the traditional insurance business model.</p>
   </section>
 
-  <section class="section container">
+  {# <section class="section container">
     <h2 class="section__subtitle">Products</h2>
     <p class="section__title">Meet the Founders</p>
     <div class="founder-card">
@@ -52,72 +43,35 @@
         <p class="founder-card__bio">Mr. Ang Wee Hui, Jackson is the company’s Group Head of Sales. He served as Group Sales Director with Howden Insurance Pte Ltd from 2015 to 2017. He served as Business Development Manager with NCI Brokers (Asia) Pte Ltd from 2012 to 2015. He founded and led his own company CreditPixel from 2011-2012. He served as Manager of Trade Credit with Aeon from 2001 to 2011.</p>
       </div>
     </div>
-  </section>
+  </section> #}
 
   <section class="section container section--last">
-    <h2 class="section__subtitle">Products</h2>
-    <p class="section__title">Managements</p>
+    <h2 class="section__subtitle">Team</h2>
+    <p class="section__title">Meet the Founders</p>
+
+    {% set team = [
+      { name: 'Fong Khai Hin', position: 'CEO & CTO', photo: '/img/about/team/fong-khai-hin', url: '/fong-khai-hin' },
+      { name: 'Ang Wee Hui', position: 'Head, Group Sales', photo: '/img/about/team/ang-wee-hui', url: '/ang-wee-hui' },
+      { name: 'Seetoh Weng Seng', position: 'Country Manager, Singapore', photo: '/img/about/team/seetoh-weng-seng', url: '/seetoh-weng-seng' },
+      { name: 'Chow Kooi Yew', position: 'Financial Controller', photo: '/img/about/team/chow-kooi-yew', url: '/chow-kooi-yew' },
+      { name: 'Zachary Wong', position: 'Co-Founder & Product Evangelist', photo: '/img/about/team/zachary-wong', url: '/zachary-wong' },
+      { name: 'Jemee Lee', position: 'CTO, Tokiomarine', photo: '/img/about/team/jemee-lee', url: '/jemee-lee' }
+    ] %}
 
     <div class="managements">
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Fong Khai Hin", "manager-card__img", "/img/about/team/fong-khai-hin", "jpg") }}
+      {% for member in team %}
+        <div class="manager-card">
+          <a href="{{ member.url }}">
+            <div class="manager-card__img-wrap">
+              {{ picture(member.name, "manager-card__img", member.photo, "jpg") }}
+            </div>
+            <div class="manager-card__content">
+              <h3 class="manager-card__name">{{ member.name }}</h3>
+              <p class="manager-card__position">{{ member.position }}</p>
+            </div>
+          </a>
         </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Fong Khai Hin</h3>
-          <p class="manager-card__position">CEO & CTO</p>
-        </div>
-      </div>
-
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Ang Wee Hui", "manager-card__img", "/img/about/team/ang-wee-hui", "jpg") }}
-        </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Ang Wee Hui, Jackson</h3>
-          <p class="manager-card__position">Head, Group Sales</p>
-        </div>
-      </div>
-
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Manager 1", "manager-card__img", "/img/about/team/manager1", "jpg", hasWebp=false) }}
-        </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Seetoh Weng Seng, David</h3>
-          <p class="manager-card__position">Country Manager, Singapore</p>
-        </div>
-      </div>
-
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Manager 2", "manager-card__img", "/img/about/team/manager2", "jpg", hasWebp=false) }}
-        </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Chow Kooi Yew</h3>
-          <p class="manager-card__position">Financial Controller</p>
-        </div>
-      </div>
-
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Manager 3", "manager-card__img", "/img/about/team/manager3", "jpg", hasWebp=false) }}
-        </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Zachary Wong</h3>
-          <p class="manager-card__position">Co-Founder & Product Evangelist</p>
-        </div>
-      </div>
-
-      <div class="manager-card">
-        <div class="manager-card__img-wrap">
-          {{ picture("Manager 4", "manager-card__img", "/img/about/team/manager4", "jpg", hasWebp=false) }}
-        </div>
-        <div class="manager-card__content">
-          <h3 class="manager-card__name">Jemee Lee</h3>
-          <p class="manager-card__position">CEO, Tokioamarine</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 {% endblock %}

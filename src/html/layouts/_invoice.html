@@ -15,7 +15,9 @@
 <body>
   {% include "components/_header--invoice.html" %}
 
-  {% block content %}{% endblock %}
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
 
   {% include "components/_footer.html" %}
 </body>

@@ -28,6 +28,8 @@
     &-wrap {
       position: relative;
       padding-bottom: 97%;
+      margin: 0 auto;
+      max-width: 350px;
       height: 0;
       overflow: hidden;
       border-radius: 3px 3px 0 0;
@@ -42,6 +44,7 @@
   &__name {
     margin: 0;
     font-size: 1.2em;
+    color: $text-dark;
   }
 
   &__position {
@@ -49,6 +52,12 @@
     font-size: 1.1em;
     color: $text-gray;
     text-transform: capitalize;
+  }
+
+  &:hover #{&} {
+    &__name {
+      color: rgba($text-dark, .7);
+    }
   }
 
   @include media("<768px") {

@@ -13,6 +13,7 @@
     
     &-wrap {
       max-width: 350px;
+      max-height: 350px;
       width: 100%;
       flex: 0 0 auto;
     }
@@ -40,6 +41,10 @@
     margin-bottom: 0;
     color: $text-dark-2;
 
+  }
+
+  &:only-child {
+    margin-top: 0;
   }
 
   &:nth-child(even) {

@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Seetoh Weng Seng, David" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'seetoh-weng-seng' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Seetoh Weng Seng, David", "founder-card__img", "/img/about/team/seetoh-weng-seng", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Seetoh Weng Seng, David</h3>
+        <p class="founder-card__position">Country Manager, Singapore</p>
+        <p class="founder-card__bio">Mr. Seetoh Weng Seng, David is the Country Manager for Singapore. He served as Senior Commercial Manager with COMPAGNIE FRANCAISE D'ASSURANCE POUR LE COMMERCE EXTERIEUR (COFACE) from 2012 to 2018, and held similar roles as Senior Manager with ECICS Limited from 2010 to 2012.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

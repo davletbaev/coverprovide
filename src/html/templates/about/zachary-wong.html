@@ -1,0 +1,29 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "Zachary Wong, Jackson" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'About us', link: '/about' },
+        { label: 'Zachary Wong' }
+      ]) }}
+    </nav>
+  </section>
+
+   <section class="section container section--last">
+    <div class="founder-card">
+      <div class="founder-card__img-wrap">
+        {{ picture("Zachary Wong", "founder-card__img", "/img/about/team/zachary-wong", "jpg") }}
+      </div>
+
+      <div class="founder-card__content">
+        <h3 class="founder-card__name">Zachary Wong</h3>
+        <p class="founder-card__position">Co-Founder & Product Evangelist</p>
+        <p class="founder-card__bio">A current undergraduate In Boston University </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
