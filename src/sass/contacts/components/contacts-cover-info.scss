@@ -22,11 +22,7 @@
   &__link {
     color: $text-white;
     font-size: 1.25em;
-    border-bottom-color: transparent;
-
-    &:hover,
-    &:focus {
-      border-bottom-color: currentColor;
-    }
+    
+    @extend .link;
   }
 }

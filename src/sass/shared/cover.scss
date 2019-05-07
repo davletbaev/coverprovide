@@ -5,7 +5,7 @@
   color: $text-white;
   background: linear-gradient(136.81deg, #3F46E3 23.45%, #69FFD2 138.71%);
 
-  &--full {
+  &:only-child {
     flex: 1 0 auto;
     height: auto;
     max-height: none;

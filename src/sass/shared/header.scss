@@ -161,12 +161,8 @@
   &__link {
     display: inline-block;
     padding: 10px;
-    color: inherit;
-    border: 0;
 
-    &:hover {
-      opacity: 0.75;
-    }
+    @extend .link;
   }
   
   @include media("<1024px") {

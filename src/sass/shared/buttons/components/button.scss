@@ -27,6 +27,10 @@
     outline: none;
   }
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   @include media("<768px") {
     font-size: 0.8rem;
   }
@@ -49,6 +53,11 @@
 
 .button--outline {
   border-color: currentColor;
+
+  &:disabled {
+    border-color: #D2D5E8;
+    color: #D2D5E8;
+  }
 }
 
 .button--uppercase {

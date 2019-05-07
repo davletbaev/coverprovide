@@ -4,12 +4,26 @@
 
   &:hover,
   &:focus {
-    background: rgba($color-primary-2, .7);
+    background: #6B7CE7;
+  }
+
+  &:disabled {
+    background: #D2D5E8;
   }
   
   &.button--outline {
     color: $color-primary-2;
     background: none;
+
+    &:hover,
+    &:focus {
+      background: #EDEDFD;
+    }
+
+    &:disabled {
+      color: #D2D5E8;
+      background: none;
+    }
   }
 }
 

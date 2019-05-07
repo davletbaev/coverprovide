@@ -60,15 +60,28 @@
     &[type=number] {
         -moz-appearance: textfield;
     }
+
+    &:focus {
+      background: #fff;
+      box-shadow: 0 0 0 1px #D5D5E2;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px #D5D5E2;
+    }
+
+    &.error {
+      padding-right: 3em;
+      box-shadow: 0 0 0 1px #FF0F0F;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 0.9em) center;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23FFE9E9'/%3E%3Cpath fill='%23FF0F0F' d='M10 9.308L13.808 5.5a.49.49 0 1 1 .692.692L10.692 10l3.808 3.808a.49.49 0 0 1-.692.692L10 10.692 6.192 14.5a.49.49 0 1 1-.692-.692L9.308 10 5.5 6.192a.49.49 0 0 1 .692-.692L10 9.308z'/%3E%3C/svg%3E");
+    }
   }
 
   &__select {
     width: 100%;
-  }
-
-  &__input:focus {
-    outline: none;
-    box-shadow: 0 0 0 1px #2B44DC;
   }
 
   &--numeric #{&} {

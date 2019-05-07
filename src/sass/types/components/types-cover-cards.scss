@@ -26,7 +26,13 @@
   text-align: left;
   background: #FFFFFF;
   border-radius: 1em;
-  box-shadow: 0px 14px 80px rgba(40, 42, 86, 0.16);
+  will-change: box-shadow;
+  box-shadow: 0px 8px 20px rgba(40, 42, 86, 0.06);
+  transition: box-shadow ease-in-out 0.2s;
+
+  &:hover {
+    box-shadow: 0px 14px 80px rgba(40, 42, 86, 0.16);
+  }
 
   &__icon {
     font-size: 3.25em;

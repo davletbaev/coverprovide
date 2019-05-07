@@ -24,3 +24,14 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.link {
+  color: inherit;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+    border: 0;
+  }
+}

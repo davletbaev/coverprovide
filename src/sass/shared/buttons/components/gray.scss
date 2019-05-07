@@ -7,9 +7,19 @@
     background: #D8D9ED;
   }
 
+  &:disabled {
+    background: #D2D5E8;
+    color: white;
+  }
+
   &.button--outline {
     color: $text-dark;
     border-color: #E6E6EE;
     background: none;
+
+    &:disabled {
+      color: #D2D5E8;
+      background: none;
+    }
   }
 }
