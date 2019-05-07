@@ -1,10 +1,12 @@
 $(document).ready(() => {
+  objectFitImages()
   initMobileNav()
   initSelects()
   initSliders()
   initResizeWatcher()
   initTableLayout()
   initNumericFields()
+
 })
 
 function initMobileNav() {
