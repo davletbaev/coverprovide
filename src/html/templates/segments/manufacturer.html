@@ -1,0 +1,95 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What Commercial Auto Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Main Page', link: '/' },
+        { label: 'Manufacturer' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Protection is necessary for Manufacturers</h2>
+    <p>Manufacturers are key players that transform nature’s produce to tangible usable items for consumers like us…. They harvest grapes from vineyards to make fine wines that are served on our dinner tables, or they build/assemble vehicle components to make traveling so much easier & comfortable in our daily commute.</p>
+    <p>Manufacturers are often seen as producers of finished products. Manufacturers use the raw materials and sub-assemblies made by other producers to create their products, which is ultimately sold to consumers in the market.</p>
+    <p>Having played an important role in the supply chain, it is important to make sure that these entities are sufficiently protected such that they could continue to deliver value products with a peace of mind.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>Who exactly is the manufacturer?</h2>
+    <p>It can be any company or person that makes an unfinished product, finished…. It’s that simple really. It could be the company that produces things you find in the supermarket shelves, retail outlets, car showrooms… or even Japanese restaurants that serves you Ebi Tempura set from prawns they have caught/gotten from the sea/wet markets.</p>
+    <p>In a nutshell, the manufacturer is someone whom has created a product that delivers value to consumers like us, by transforming raw materials to a finished product that is ready for consumption.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Insurance does Manufacturers need?</h2>
+    <p>It all depends what products/ services is rendered by the manufacturer, how the business is conducted, or even how closely intertwined it’s role in the supply chain. Take for example.</p>
+    <p>Primitive land farming would require more farmers in the fields as compared to industrial farming which uses agriculture machineries…</p>
+    <p>Or an industrial factory in suburban areas would demand the use of more factory workers as compared to the use of technology (robotic arms in car assembly factories) for more technologically advanced manufacturers.</p>
+    <p>We could also determine what insurance cover the manufacturer needs by matching the policy insured activities & policy limits to its business liabilities. Using the same example above, land farming by use of farmers will need to purchase Work Injury Compensation Insurance (WIC) to cover against events of injury/ or death caused by unforeseen accidents in the field, whereas the latter agricultural company will need to buy Machinery All Risk/ Electronic All Risk Insurance to cover your machinery, which is necessary for the running of your business against unforeseen and sudden physical loss or damage.</p>
+
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What policies are suitable for Manufacturers?</h2>
+
+    <h4>Work Injury Compensation (WIC)</h4>
+    <ul>
+      <li>Mandatory legal requirement for companies that relies on human manual labour, and/or employs workers that earns less than $1,600/pm</li>
+      <li>Labour intensive related industries (factories, assembly plants, construction sites, mills, farms)</li>
+    </ul>
+
+    <h4>Motor Insurance</h4>
+    <ul>
+      <li>Companies that uses commercial vehicles, prime movers, cranes , hoisting vehicles will need to protect their assets against loss or damage</li>
+      <li>Legal requirement to have road insurance in place prior to conduct of business</li>
+      <li>Companies that are in the logistic business (freight forwarding, movers, logistics)</li>
+    </ul>
+
+    <h4>Property Insurance</h4>
+    <ul>
+      <li>Requirement for companies that has warehouses, factories, mills, plants to protect against loss or damage of property & its contents.</li>
+      <li>Consequential damages which includes business interruption, rebuilding/repair cost, inventories replacement cost, 3rd party damages could prove to be very costly if left uninsured</li>
+    </ul>
+
+    <h4>Product Liability</h4>
+    <ul>
+      <li>Damages or death caused to 3 rd parties through the use of product, due to performance or functional failure, which may lead of costly lawsuits or penalties associated with failure to comply to either regulatory requirements or social/ enterprise guidelines</li>
+      <li>Protection against such liabilities is important if the product is the key driver to the growth of the company. Company branding & goodwill is left compromised, as a result of inadequate protection against possible product performance failure</li>
+    </ul>
+
+    <p>Other insurance products that are commonly used in the manufacturer sectors will include:</p>
+    <ul>
+      <li>Inland Transit</li>
+      <li>Marine Cargo</li>
+      <li>Cyber Security</li>
+      <li>Fidelity Guarantee</li>
+      <li>Public Liability</li>
+      <li>Business interruption</li>
+      <li>Director & Officer Liability</li>
+      <li>Bond</li>
+    </ul>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What is Cost of Protection?</h2>
+    <p>From a needs based analysis, it would be more meaningful to look at the amount of coverage required and derive the insurance cost that is associated with the protection required. Hence, company owner needs to understand their liabilities whilst conducting their business, and seek a suitable suite of insurance cover that addresses most if not all of their immediate and/or future liabilities.</p>
+    <p>For a detailed recommendation, we advise you to list down your requirements in the quotation page to allow us to understand your needs better before we provide our solutions.</p>
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}

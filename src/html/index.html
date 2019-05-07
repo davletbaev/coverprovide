@@ -195,10 +195,10 @@
 
       <div class="section__content iconic-block-group">
         {% set iconicGroup2 = [
-          { icon: 'briefcase', label: 'Raw materials\n supplier' },
-          { icon: 'bull-horn', label: 'Manufacturer' },
-          { icon: 'rotate-axis', label: 'Wholesaler' },
-          { icon: 'price-tag', label: 'Retailer' }
+          { icon: 'briefcase', label: 'Raw materials\n producer', url: '/raw-materials-producer' },
+          { icon: 'bull-horn', label: 'Manufacturer', url: '/manufacturer' },
+          { icon: 'rotate-axis', label: 'Wholesaler', url: '/wholesaler' },
+          { icon: 'price-tag', label: 'Retailer', url: '/retailer' }
         ] %}
           {# { icon: 'user', label: 'End - user' } #}
 
@@ -210,8 +210,8 @@
 
             <span class="iconic-block__label">{{ item.label | e }}</span>
             
-            <a href="#quoteModal" rel="modal:open" class="iconic-block__button button button--gray button--uppercase">
-              <span>Get a quote</span>
+            <a href="{{ item.url }}" class="iconic-block__button button button--gray button--uppercase">
+              <span>Learn More</span>
               <i class="icon icon--right-dark"></i>
             </a>
           </div>
