@@ -16,6 +16,12 @@
     font-size: 1.625em;
   }
 
+  @include media("<1024px") {
+    &__up {
+      margin-right: auto;
+    }
+  }
+
   @include media("<768px") {
     height: auto;
     padding: 1.5em 0;
