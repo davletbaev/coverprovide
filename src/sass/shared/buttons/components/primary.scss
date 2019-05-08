@@ -27,3 +27,12 @@
   }
 }
 
+a.button--primary:not([href]) {
+  background: #D2D5E8;
+
+  &.button--outline {
+    color: #D2D5E8;
+    background: none;
+  }
+}
+

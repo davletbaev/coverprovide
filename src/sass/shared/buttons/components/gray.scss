@@ -23,3 +23,13 @@
     }
   }
 }
+
+a.button--gray:not([href]) {
+  background: #D2D5E8;
+  color: white;
+
+  &.button--outline {
+    color: #D2D5E8;
+    background: none;
+  }
+}

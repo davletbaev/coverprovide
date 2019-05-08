@@ -29,10 +29,22 @@
 
   &:disabled {
     cursor: not-allowed;
+
+    .icon {
+      opacity: 0.5;
+    }
   }
 
   @include media("<768px") {
     font-size: 0.8rem;
+  }
+}
+
+a.button:not(:link) {
+  cursor: not-allowed;
+
+  .icon {
+    opacity: 0.5;
   }
 }
 

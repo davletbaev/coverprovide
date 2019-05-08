@@ -27,3 +27,13 @@
     }
   }
 }
+
+a.button--white:not([href]) {
+  background: $bg-white;
+  color: #D2D5E8;
+
+  &.button--outline {
+    color: #D2D5E8;
+    background: none;
+  }
+}
