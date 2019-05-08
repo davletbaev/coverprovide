@@ -7,17 +7,17 @@
     Sign in to your account
   </h1>
 
-  <form class="login__form form" action="/" method="POST">
+  <form class="login__form form" action="/dashboard" method="GET">
     <div class="form__group">
-      {{ field('Email Address', type="email",'email', icon="email", isRequired=true, size="lg") }}
+      {{ field('Email Address', type="email",'email', icon="email", size="lg") }}
     </div>
 
     <div class="form__group">
-      {{ field('Password', type="password", 'password', icon="lock", isRequired=true, size="lg") }}
+      {{ field('Password', type="password", 'password', icon="lock", size="lg") }}
     </div>
 
     <div class="form__group form__group--row">
-      {{ checkbox('Remember me', 'remember', true, true) }}
+      {{ checkbox('Remember me', 'remember', true) }}
 
       {# <a href="/forgot-password" class="form__link">Forgot password?</a> #}
     </div>
