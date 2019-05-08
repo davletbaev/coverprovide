@@ -1,0 +1,95 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What Commercial Property Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Products', link: '/' },
+        { label: 'What Commercial Property Insurance Is All About' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container inner-section--first">
+    <h2>What Commercial Property Insurance Is All About</h2>
+    <p>We sometimes read in papers of buildings got burnt down by raging fires, like the recent fire outbreak to CK building (Tampines) back in Aug’17. Firefighters fought the burning flames for 16hours, and it is recorded to be the largest industrial estate fire in the same year. Thankfully there is no loss in human lives, but inventories & goods worth hundreds and thousands in value have been lost.</p>
+    <p>Despite increased efforts by business owners in fire prevention, YoY we are noticing more incidents of fire outbreaks in commercial & industrial buildings. According to a report published by SCDF in 2018, SCDF responded to 515 fire incidents in non-residential premises (commercial, industrial, social and communal) in Year 2018 alone, an increase of 10.3% (467 cases) from  preceding year.</p>
+
+    <figure>
+      <img src="/img/products/diagram.jpg" alt="Annual Statistics 2018">
+      <figcaption>
+        <a href="https://www.scdf.gov.sg/docs/default-source/scdf-library/amb-fire-inspection-statistics/scdf-annual-statistics-2018.pdf" target="_blank">Fire, emergency medical services and enforcement statistics 2018</a>
+      </figcaption>
+    </figure>
+
+    <p>Protection of your property such as building, fixtures and contents against loss or damage due to fire and other insured perils is important, as business disruptions due to such damages could have severe implications to the company solvency, had the loss not been indemnified by a comprehensive Commercial Property Insurance policy.</p>
+    <p>Read on more to find out how you can protect your property & its content</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Is Commercial Property Insurance?</h2>
+    <p>Commercial Motor Insurance is for businesses that own and operate vehicles. This insurance helps companies cover the costs of repairing or replacing company vehicles within the boundaries of the insurance policy.</p>
+    <p>One common misconception is the assumption that a personal insurance policy covers liability in an accident that occurs while using the vehicle for business. It usually doesn't, as most policies explicitly exclude coverage for business use. Instead, you'll need a separate commercial vehicle policy to cover your vehicle.</p>
+    <p>In many instances, it is often mandatory by law to have a vehicle insured for business use. However, statutory requirements does not explicitly state how much of a coverage should be put in place to cover potential perils associated with road accidents. As a general rule, the policy should consider the potential drivers/passengers, type of vehicle, driving record, the cargo as well as the business nature.</p>
+    <p>For example, a freight forwarder company may need to purchase a more comprehensive auto insurance for their commercial fleet as compared to a bank relationship manager driving their company salon car when meeting customers.</p>
+    <p>Depending on the coverage selected, this insurance covers vehicles the business owns, contracts with, and leases. It also helps cover injured employees should an accident happen.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>Do I Need Commercial Auto Insurance?</h2>
+    <p>This insurance comes in handy if your business:</p>
+    <ul>
+      <li>Delivers goods using a vehicle</li>
+      <li>Transports people from place to place</li>
+      <li>Transports equipment for business use</li>
+      <li>Is in the towing business</li>
+      <li>You frequently drive your personal vehicle for business</li>
+      <li>You own a vehicle that is registered to your business</li>
+      <li>Your employees drive company vehicles</li>
+    </ul>
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does Commercial Auto Insurance Cover?</h2>
+    <p>A commercial auto insurance policy usually offers three major types of protection:</p>
+
+    <h4>Third Party Cover</h4>
+    <p>This policy covers the driver's legal liability for damage to property belonging to other persons such as cars, fences and streetlights et cetera.</p>
+    <p>It also includes the driver's legal liability for death or bodily injuries to passengers and third parties caused by his/her negligence. This is usually the entry-level policy as it provides the least coverage.</p>
+    <p>The policy covers any incidents happening in Singapore, West Malaysia and 80km of Thailand from the borders of Malaysia.</p>
+
+    <h4>Third party, fire and theft</h4>
+    <p>On top of the entry-level policy, this cover includes accidental loss or damage by fire and/or theft of the vehicle. Obviously, this would cost slightly more than the first policy.</p>
+
+    <h4>Comprehensive Cover</h4>
+    <p>This is the most common policy and has the widest protection for the insured. Like the third party cover, it covers the driver's legal liability for damage to property belonging to other persons. On top of that, it also covers repair or replacement of the driver's own vehicle if it is damaged or lost as a result of accident, theft or vandalism.</p>
+    <p>Though the term 'comprehensive' is used, the standard comprehensive cover does not include loss from riots, strikes and civil commotions, and acts of God (force majeure).</p>
+    <p>It is advisable to get comprehensive insurance coverage since it provides not only third-party coverage but also damage done to yourself when you are the party at fault in an accident. It is compulsory to get comprehensive insurance coverage for drivers who are still financing their cars.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>How Much Does Commercial Auto Insurance Cost?</h2>
+    <p>There are many factors insurers consider when they rate Commercial Auto Insurance. For instance, they consider the industry a business belongs to when they determine the cost of insurance. The following are additional factors insurance companies consider when determining the rate a business pays for Commercial Auto Liability coverage:</p>
+    <ul>
+      <li>Employee driving records</li>
+      <li>Items being transported</li>
+      <li>The value of the vehicle</li>
+      <li>The type of vehicle</li>
+      <li>Amount of coverage</li>
+      <li>Type of coverage</li>
+      <li>Other risks</li>
+    </ul>
+    <p>With risks being the driving force behind the cost of Commercial Auto Insurance, insurance companies examine a business’ potential for risk to determine the cost of coverage.</p>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}

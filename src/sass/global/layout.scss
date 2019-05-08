@@ -228,6 +228,28 @@
   h6 + ul {
   }
 
+  pre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    border: 1px solid #D5D5E2;
+    padding: 1em;
+    border-radius: 0.375em;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  a:not(.button) {
+    color: $color-primary;
+    
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
   @include media("<768px") {
     font-size: 1rem;
   }
@@ -383,6 +405,28 @@
         float: none;
         max-width: 100%;
       }
+    }
+  }
+
+  pre {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    border: 1px solid #D5D5E2;
+    padding: 1em;
+    border-radius: 0.375em;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  a:not(.button) {
+    color: $color-primary;
+    
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid currentColor;
     }
   }
 

@@ -2,6 +2,7 @@
 
 {% set title = "Insure SME" %}
 {% set headerIsWhite = true %}
+{% set currentPath = '/' %}
 
 {% block content %}
   <section class="cover">
@@ -158,13 +159,15 @@
         {% set iconicGroup1 = [
           { icon: 'lifebelt', label: 'Marine Cargo' },
           { icon: 'earth', label: 'Travel' },
-          { icon: 'home', label: 'Property' },
-          { icon: 'chart', label: 'Commercial\n Auto Insurance' },
+          { icon: 'home', label: 'Property', url: '/property' },
+          { icon: 'chart', label: 'Commercial\n Auto Insurance', url: '/property' },
           { icon: 'cyber', label: 'Cyber Insurance' },
           { icon: 'receipt', label: 'Work Injury\n Compensation' },
-          { icon: 'list', label: 'General Liability\n insurance' },
-          { icon: 'flag-blue', label: 'Fidelity Guarantee\n Insurance' },
-          { icon: 'card', label: 'Trade Credit\n Insurance' }
+          { icon: 'list', label: 'General Liability\n insurance', url: '/general-liablity' },
+          { icon: 'flag-blue', label: 'Fidelity Guarantee\n Insurance', url: '/fidelity' },
+          { icon: 'card', label: 'Trade Credit\n Insurance', url: '/trade-credit' },
+          { icon: 'card', label: 'Group PA\n Insurance', url: '/group-pa' },
+          { icon: 'card', label: 'Inland Transit\n Insurance', url: '/inland-transit' }
         ] %}
 
         {% for item in iconicGroup1 %}
@@ -175,8 +178,8 @@
 
             <span class="iconic-block__label">{{ item.label | e }}</span>
             
-            <a href="#quoteModal" rel="modal:open" class="iconic-block__button button button--gray button--uppercase">
-              <span>Get a quote</span>
+            <a {% if item.url %}href="{{ item.url }}"{% endif %} class="iconic-block__button button button--gray button--uppercase">
+              <span>Learn More</span>
               <i class="icon icon--right-dark"></i>
             </a>
           </div>

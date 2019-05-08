@@ -1,0 +1,77 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What Inland Transit Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Products', link: '/' },
+        { label: 'What Inland Transit Insurance Is All About' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container inner-section--first">
+    <h2>What Inland Transit Insurance Is All About</h2>
+    <p>Road accidents are common in a densely populated city like Singapore, especially during morning rush hours or in congested areas like industrial parks or in city centre. Based on a 2016 report by Data.gov.sg, it is reported that the main causes of road accidents is mainly failing to keep a proper lookout or loss of control of the vehicle, of which could possibly lead to damages to the goods while in transit on land, hence the need for Inland Transit Insurance.</p>
+    <p>The supplier would suffer a loss if the goods are damaged/destroyed while in transit to its destination, and the replacement cost would generally include the value of the goods destroyed, delivery cost, vehicle repair cost, and time.</p>
+    <p>Businesses need to ensure that all stages of the supply chain are not disrupted (from manufacture to delivery). Having an Inland transit insurance is essential to protect against any loss of goods due to any unforseen circumstances while on the road.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Is Inland Transit Insurance?</h2>
+    <p>This policy covers loss, destruction or damage to the goods whilst in transit, which includes the packing and unpacking, loading or offloading, transportation and storage of goods by any means land conveyance or whilst temporarily housed in the ordinary course of transit within the territorial limit caused by named perils or accidental means. The policy would also include loss of goods by theft (during transit) or flood, however voyage by sea is generally excluded under Inland Transit, but could be covered by Marine cargo insurance.</p>
+    <p>Typically the policy covers for domestic transportation, and cover could be extended to either 1 vehicle or a fleet of vehicles. Premium would depend greatly on the type of goods covered. A high valued goods will generally require higher policy coverage to indemnify a potential claim, hence a higher premium is expected.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>Do I Need Inland Transit Insurance?</h2>
+    <p>This insurance comes in handy if your business:</p>
+    <ul>
+      <li>Delivers goods using a vehicle</li>
+      <li>Transports equipment for business use</li>
+      <li>Is in logistics / freight forwarding industry</li>
+      <li>Handles and delivers high value goods</li>
+      <li>Engages a third party carrier to deliver goods</li>
+    </ul>
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What does Inland Transit Insurance Cover?</h2>
+
+    <h4>Types of Policies</h4>
+    <p>Specific Policy - The policy issued for a specified transit. The coverage under the policy will cease on completion of the transit contemplated.</p>
+    <p>Open Policy - This is a policy intended to cover Inland movement of consignments for specified period of time which is usually one year. This policy is suitable for insured with numerous transactions throughout the year. The availability of the open policy facilitates the insured in having automatic and continuous cover and the insured is free to declare the consignment movement subject to the terms and conditions of the policy. The open policy is issued with an initial sum insured which can be enhanced at policy rate any time during the currency of the policy.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What does Inland Transit not cover?</h2>
+    <p>This policy does not cover:</p>
+    <ul>
+      <li>loss of any liquid gas or goods from containers by leakage or spilling unless cause by fire, accident to the conveyance or object falling on to the conveyance</li>
+      <li>war and allied risks</li>
+      <li>loss or damage caused by weather, atmospheric conditions, wear and tear, moth, vermin, insects, damp, mildew, rust, defective packing, hooks or slings, delay, loss or market, depreciation or deterioration, contamination, fermentation or spontaneous combustion or consequential loss of any kind</li>
+      <li>theft or pilferage in which any employee of the insured</li>
+      <li>loss or damage occasioned by confiscation, nationalisation, detention, requisition or willful destruction by authorities.</li>
+      <li>loss or damage whilst the property is temporarily housed in the course of transit for the purpose of storage, making up, packing or processing</li>
+      <li>any act of terrorism</li>
+    </ul>
+  </section>
+
+  <section class="inner-section container">
+    <h2>How Much Does Inland Transit Insurance Cost?</h2>
+    <p>Generally, the premium cost is greatly dependent on the goods/cargo in transit, and the distance of the voyage, and the nature of the business.</p>
+    <p>High valued goods, OEM products or rare artefacts could raise the premium cost as the policy needs to cater for a higher indemnity amount to cover the cargo value. Large scaled deliveries (eg logistic or freight forwarding companies) would also command a higher premium amount as the policy will need to cover the entire fleet of vehicles.</p>
+    <p>Land conveyance could be of a longer distance if it is an interstate delivery, or shorter if the delivery is within the city/town. The inherent risk of long hours driving could impede a driver’s ability to stay focused on the road, which potentially could lead to accidents caused by fatigue.</p>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}

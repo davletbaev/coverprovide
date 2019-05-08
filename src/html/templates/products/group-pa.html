@@ -1,0 +1,64 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What Group PA Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Products', link: '/' },
+        { label: 'What Group PA Insurance Is All About' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container inner-section--first">
+    <h2>What Group PA Insurance Is All About</h2>
+    <p>Employees are the most important asset to a business and it is essential that every organisation provides 24/7 healthcare & financial assistance in an event that the staff meets with an unforeseen accident. Workplace injuries could be fatal, or may even cause permanent disability, leaving your staffs with huge medical bills and a lifetime of inconvenience.</p>
+    <p>Group Personal Accident insurance allows for the employer to help their staffs deal with the cost of rehabilitation, surgery by offering a lump sum benefit payout to employee or beneficiary(ies) for accident related deaths or severe injuries.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Is Group PA Insurance?</h2>
+    <p>Group PA typically offers lump sum benefits for death or permanent disability claims as a standard policy feature. However, some insurers may offer optional benefits which includes temporary total disability, temporary partial disability, hospital care allowances or even medical & surgical treatments.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does Group PA Insurance Cover?</h2>
+    <p>The policy will cover staffs whom are gainfully employed during the insurance period. The policy may indicate the age of staffs whom are eligible for this coverage, but some main exclusions will apply.</p>
+
+    <h4>Main exclusions</h4>
+    <ul>
+      <li>War and allied risks</li>
+      <li>Suicide (whether sane or insane) or any attempt thereat</li>
+      <li>Pre-existing physical or mental defect or infirmity</li>
+      <li>Illness, diseases, infections, acquired immune deficiency syndrome (AIDS), human immune deficiency virus (HIV) and/or HIV related illnesses</li>
+      <li>Childbirth, miscarriage, pregnancy or any other complications thereof</li>
+      <li>Flying as a pilot or crew member in any aircraft other than as a fare paying passenger in an aircraft licensed for passenger service</li>
+      <li>Criminal acts</li>
+      <li>Professional sports activities of any kind</li>
+      <li>Hazardous sports activities such as mountaineering involving the use of ropes, caving, parachuting, hand gliding, hunting, racing of any kind (other than on foot), scuba-diving, bungee jumping and water ski jumping</li>
+      <li>Radioactive and nuclear weapon material accidents</li>
+    </ul>
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>How Much Does Group PA Insurance Cost?</h2>
+    <p>Underwriters will take into account the nature of the job, age of employees when computing the premium payable under this policy type.</p>
+    <p>A Class 1 job will have lesser risk of accidents hence lower premiums is expected for employees in this category. An illustration of this is shown below:</p>
+    <ul>
+      <li>Class 1 - Persons engaged in professional, administrative, managerial, clerical and non-manual work eg. Accountant, Florists, Clerk, Teachers</li>
+      <li>Class 2 - Persons engaged in work of supervisory nature but not involved in manual work and sales personnel eg. Agents (involving travelling), Cook/Chef, Shop Assistants</li>
+      <li>Class 3 - Persons engaged in manual wok involving the use of tools or machinery eg. Painters, Delivery Boys, Technician, Motor Repairers</li>
+    </ul>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}

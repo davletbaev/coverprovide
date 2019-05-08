@@ -1,0 +1,99 @@
+{% extends "layouts/_base.html" %}
+{% from "components/_breadcrumbs.html" import breadcrumbs %}
+
+{% set title = "What General Liability Insurance Is All About" %}
+
+{% block content %}
+  <section class="section section--first">
+    <nav class="container">
+      {{ breadcrumbs([
+        { label: 'Products', link: '/' },
+        { label: 'What General Liability Insurance Is All About' }
+      ]) }}
+    </nav>
+  </section>
+
+  <section class="inner-section container inner-section--first">
+    <h2>What General Liability Insurance Is All About</h2>
+    <p>Business is inherently risky, but business liability coverage safeguards against many known and unknown risks. Commercial general liability insurance coverage protects you, your business and your employees from claims involving bodily injury or property damage, up to the limits of your policy. Policies shield you from the expense of out-of-court settlements, litigation and judgments awarded by courts. It covers non-professional negligent acts only, and professional indemnity/ Worker Injury Compensation insurance should be considered too when structuring for a more comprehensive cover for your business.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Is General Liability Insurance Coverage?</h2>
+    <p>In the course of operating a business, employee plays an integral part in performing their daily task. Some of it requires performing manual work while others requires interaction with customers/vendors, all of which could pose a serious problem to the business if employees were to sue due to workplace injuries.</p>
+    <p>While employee benefits insurance may cover the medical cost associated with the treatment of patients (employees), the staff may further seek to press charges against their employers if the result of the injury is incurred while performing their job, hence it is important for companies to be adequately covered against such litigation possibilities.</p>
+    <p>This class of insurance is the most basic form of insurance that any business needs to take up. Whether you are an SME, mid-sized corporation or large MNC, huge legal cost could put a company out of business if one is under-insured. There are various forms of liability insurance (Directors & Officers Liability, Public Liability, Product liability, Professional Indemnity) that compliments & caters to address the various risk that is associated with the nature of their business/role/ product offerings, but to put in place a general insurance policy is essential after a company’s incorporation.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>Do I Need General Liability Insurance?</h2>
+    <p>It is always better to be safe than sorry. All businesses should consider purchasing this insurance, and we are advocating this if the following scenarios apply to your business:</p>
+    <ul>
+      <li>If you are in the M&E / building and construction industries/ Logistics & freight-forwarding/ Marine & offshore / Oil & Gas</li>
+      <li>If you are the Contractors or Sub-contractors performing task for main con</li>
+      <li>If work done is not confined to office premises (i.e. at client’s premise, offsite conduct of business, on the road)</li>
+      <li>Job vocation has a high risk of workplace injury (occupational hazard)</li>
+      <li>As part of a Contract tender requirement to put in place General liability insurance policy</li>
+    </ul>
+
+    <a href="#quoteModal" rel="modal:open" class="button button--primary button--uppercase button--lg">
+      GET A FREE QUOTE
+      <i class="icon icon--right"></i>
+    </a>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does General Liability Insurance Cover?</h2>
+    <p>You can purchase commercial general liability insurance as a stand-alone policy, or as part of an SME office package. General coverage will include:</p>
+
+    <h4>Lawsuits, investigations and settlements</h4>
+    <p>If damages are filed against you or you’re sued, general liability insurance covers the insurance company’s investigation and attorney expenses, any judgment or settlement, medical expenses in case of injury and bonds if they must be subsequently posted.</p>
+
+    <h4>Bodily Injury damages</h4>
+    <p>Bodily injury coverage provides protection against losses from the legal liability of insureds for bodily injury or property damage to others arising out of non-professional negligent acts or for liability arising out of their premises or business operations. Such claims could potentially put a company out of business if it is ill-managed.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>You'll Know It's the Right Policy If It Covers:</h2>
+    <ul>
+      <li>Bodily injury</li>
+      <li>Property damage, including to property you are a tenant at and someone else’s property you use in the course of doing business.</li>
+      <li>Personal injury, such as slander</li>
+      <li>Defense costs, including court costs, witness fees, attorney's fees, and police report costs, regardless of fault</li>
+      <li>Reasonable expenses incurred when the insurance company asks you to assist in your defense. For example, if you lost income while spending a day in court, you would be covered</li>
+      <li>Judgements and settlements, including medical expenses.</li>
+    </ul>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Does General Liability Insurance Not Cover?</h2>
+    <p>Some general exclusion will include:</p>
+    <ul>
+      <li>Personal Injuries (non-work related)</li>
+      <li>Workers' compensation is the insurance you would need to protect your employees when they are hurt on the job.</li>
+      <li>Business general liability insurance coverage won’t cover a professional mistake, but professional liability will. It insures against mishaps that may occur as you offer your opinion, solution, service or recommendations in the course of business.</li>
+    </ul>
+  </section>
+
+  <section class="inner-section container">
+    <h2>What Are the Limits of General Liability Insurance?</h2>
+    <p>Company will need to evaluate the adequate level of protection it needs while performing its business operations. There is no hard and fast rule as to how much liability limit a company needs, but a good rule of thumb is to take into account 1) similar industries claims payment history, 2) Scope of work	, 3) Contract value of work, 4) type and nature of possible third party liability , etc.</p>
+  </section>
+
+  <section class="inner-section container">
+    <h2>How Much Does General Liability Insurance Cost?</h2>
+    <p>The cost of insurance varies greatly from each request, as business needs are different. Premiums do increase as limit of liability increases. However, if the company has a stringent workplace safety programme put in place to prevent workplace accidents, or if the company has attained workplace safety awards by accredited industry bodies/ associations, these could potentially bring premium amounts lower.</p>
+    <p>Other factors that are considered by insurers would often include the followings:</p>
+    <ul>
+      <li>Location</li>
+      <li>History of previous claims</li>
+      <li>Current and past business activities</li>
+      <li>Years of experience in the business</li>
+      <li>Business activities</li>
+      <li>Company’s turnover</li>
+    </ul>
+  </section>
+
+  {% from "components/_contact-card.html" import contactCard %}
+  {{ contactCard(true) }}
+{% endblock %}
