@@ -38,6 +38,10 @@
   border-bottom: 1px solid #E7E5EE;
   background-color: #F8F9FA;
 
+  &--th {
+    vertical-align: middle;
+  }
+
   &:first-child {
     position: sticky;
     left: -2px;
@@ -57,13 +61,9 @@
     text-align: right;
   }
 
-  &--va-middle {
-    vertical-align: middle;
-  }
-
   @include media("<1024px") {
     &:first-child {
-      vertical-align: bottom;
+      vertical-align: middle;
       width: 100vw;
       max-width: 45px;
       overflow: hidden;
