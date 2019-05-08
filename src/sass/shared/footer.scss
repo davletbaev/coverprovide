@@ -64,9 +64,12 @@
     color: inherit;
     border: 0;
 
-    &:hover {
+    &--active {
       opacity: 0.75;
+      cursor: default;
     }
+
+    @extend .link;
   }
 
   @include media("<768px") {

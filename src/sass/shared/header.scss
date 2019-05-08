@@ -162,6 +162,11 @@
     display: inline-block;
     padding: 10px;
 
+    &--active {
+      opacity: 0.75;
+      cursor: default;
+    }
+
     @extend .link;
   }
   
