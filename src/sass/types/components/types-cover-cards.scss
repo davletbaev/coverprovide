@@ -1,15 +1,17 @@
-.types-cover-cards {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: -26%;
-  margin-top: 3.125em;
+.section--types {
+  margin-top: -220px;
 
   @include media("<1024px") {
-    margin-bottom: -20%;
+    margin-top: 6.25em;
   }
+}
+
+.types-cover-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   @include media("<768px") {
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -17,7 +19,8 @@
 }
 
 .types-card {
-  flex: 1 0 30%;
+  margin-top: 1.875em;
+  flex: 0 0 calc(100%/3 - 1.875em/3);
   max-width: 21.875em;
   display: flex;
   flex-direction: column;
@@ -70,10 +73,6 @@
     & > .icon {
       margin-left: 0.6em;
     }
-  }
-
-  &:not(:first-child) {
-    margin-left: 30px;
   }
 
   @include media("<1024px") {

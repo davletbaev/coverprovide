@@ -4,65 +4,80 @@
 {% set headerIsWhite = true %}
 {% set currentPath = "/types-of-insur" %}
 
+{% set products = [
+  {
+    icon: 'car',
+    title: 'What Commercial Auto\n Insurance Is All About',
+    desc: 'Our mission is to make insurance more accesible to business owners…',
+    url: '/commercial-auto'
+  },{
+    icon: 'laptop',
+    title: 'What Cyber Liability\n Insurance Is All About',
+    desc: 'Cyber Incidents are not just\n targeted to large…',
+    url: '/cyber-liability'
+  },{
+    icon: 'money-bill',
+    title: 'What Workers Compensation Insurance Is All About',
+    desc: 'Workers Injury Compensation\n (WIC) insurance is meant…',
+    url: '/workers-compensation'
+  },{
+    icon: 'home',
+    title: 'What Commercial Property Insurance Is All About',
+    desc: 'We sometimes read in papers of buildings got burnt down by raging fires…',
+    url: '/property'
+  },{
+    icon: 'card',
+    title: 'What Trade Credit Insurance Is All About',
+    desc: 'A sale that is not paid is essentially a gift…',
+    url: '/trade-credit'
+  },{
+    icon: 'car',
+    title: 'What Inland Transit Insurance Is All About',
+    desc: 'Road accidents are common in a densely populated city like Singapore…',
+    url: '/inland-transit'
+  },{
+    icon: 'car',
+    title: 'What Group PA Insurance Is All About',
+    desc: 'Employees are the most important asset to a business and…',
+    url: '/group-pa'
+  },{
+    icon: 'list',
+    title: 'What General Liability Insurance Is All About',
+    desc: 'Business is inherently risky, but business liability coverage safeguards…',
+    url: '/general-liablity'
+  },{
+    icon: 'flag-blue',
+    title: 'What Fidelity Insurance Is All About',
+    desc: 'Fidelity Insurance is a protection for your business against any…',
+    url: '/fidelity'
+  }
+] %}
+
 {% block content %}
   <section class="cover">
     <div class="cover__container container">
       <h1 class="cover__title">Types of Insurance</h1>
-      <p class="cover__desc">Our mission is to make insurance more accesible to business owners.
-                          Every Business owner needs to do informed and optimizied descision.</p>
+      <p class="cover__desc">Our mission is to make insurance more accesible to business owners. Every Business owner needs to do informed and optimizied descision.</p>
+  </section>
 
-      <div class="types-cover-cards">
+  <section class="section container section--types">
+    <div class="types-cover-cards">
+      {% for item in products %}
         <div class="types-card">
           <div class="types-card__icon">
-            <i class="icon icon--car"></i>
+            <i class="icon icon--{{ item.icon }}"></i>
           </div>
 
-          <h3 class="types-card__title">What Commercial Auto Insurance Is All About</h3>
-          <p class="types-card__desc">
-            Whether be it a single vehicle 
-            or a commercial fleet...
-          </p>
+          <h3 class="types-card__title">{{ item.title }}</h3>
+          <p class="types-card__desc">{{ item.desc }}</p>
 
-          <a href="/commercial-auto-insur" class="types-card__link">
+          <a href="{{ item.url }}" class="types-card__link">
             <span>Learn more</span>
             <i class="icon icon--right-blue"></i>
           </a>
         </div>
-
-        <div class="types-card">
-          <div class="types-card__icon">
-            <i class="icon icon--laptop"></i>
-          </div>
-
-          <h3 class="types-card__title">What Cyber Liability Insurance Is All About</h3>
-          <p class="types-card__desc">
-            Cyber Incidents are not just 
-            targeted to large...
-          </p>
-
-          <a href="/cyber-liability-insur" class="types-card__link">
-            <span>Learn more</span>
-            <i class="icon icon--right-blue"></i>
-          </a>
-        </div>
-
-        <div class="types-card">
-          <div class="types-card__icon">
-            <i class="icon icon--money-bill"></i>
-          </div>
-
-          <h3 class="types-card__title">What Workers Compensation Insurance Is All About</h3>
-          <p class="types-card__desc">
-            Workers Injury Compensation 
-            (WIC) insurance is meant...
-          </p>
-
-          <a href="/workers-compensation-insur" class="types-card__link">
-            <span>Learn more</span>
-            <i class="icon icon--right-blue"></i>
-          </a>
-        </div>
-      </div>
+      {% endfor %}
+    </div>
   </section>
 
   {% from "components/_contact-card.html" import contactCard %}
