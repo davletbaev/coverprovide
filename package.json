@@ -25,5 +25,8 @@
     "include-media": "^1.4.9",
     "postcss-flexbugs-fixes": "^4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-clean-css": "^4.2.0",
+    "gulp-uglify": "^3.0.2"
+  }
 }
