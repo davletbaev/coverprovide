@@ -47,7 +47,6 @@
 
   @include media("<768px") {
     font-size: 0.8rem;
-    flex-wrap: wrap;
   }
 
   @media print {
