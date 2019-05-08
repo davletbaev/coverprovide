@@ -1,0 +1,37 @@
+.call-to-action {
+  margin-top: 1.5em;
+  padding: 2em;
+  font-size: 1.25rem;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #D5D5E2;
+  border-radius: 17px;
+
+  &__heading {
+    display: block;
+    margin: 0 auto 2em;
+    max-width: 680px;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+  &__caption {
+    margin-top: 2.5em;
+    font-size: 1rem;
+    color: $text-dark-2;
+  }
+
+  &__link {
+    color: $text-dark;
+    border-bottom: 1px solid transparent;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: currentColor;
+    }
+  }
+
+  @include media("<768px") {
+    font-size: 1rem;
+  }
+}
