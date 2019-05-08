@@ -201,7 +201,7 @@
 
   @include media("<=375px") {
     align-items: flex-start;
-    margin: 0;
+    margin: 50px 0 0;
 
     &__item {
       font-size: 1em;
