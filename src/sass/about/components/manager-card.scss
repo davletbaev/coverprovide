@@ -1,9 +1,9 @@
 .managements {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   font-size: 1.25rem;
   padding-top: 1.5em;
+  margin: 0 -15px;
 
   @include media("<768px") {
     font-size: 1rem;
@@ -12,7 +12,8 @@
 
 .manager-card {
   margin-top: 2em;
-  flex: 0 0 calc(100% / 3 - 2em / 3);
+  flex: 0 0 25%;
+  padding: 0 15px;
 
   &__img {
     position: absolute;
@@ -43,13 +44,13 @@
 
   &__name {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 0.9em;
     color: $text-dark;
   }
 
   &__position {
     margin-top: 0.4em;
-    font-size: 1.1em;
+    font-size: 0.9em;
     color: $text-gray;
     text-transform: capitalize;
   }
@@ -60,8 +61,20 @@
     }
   }
 
+  @include media("<1024px") {
+    flex-basis: 33%;
+  }
+
   @include media("<768px") {
-    flex-basis: calc(100% / 2 - 2em / 2);
+    flex-basis: 50%;
+
+    &__name {
+      font-size: 1.2em;
+    }
+
+    &__position {
+      font-size: 1em;
+    }
   }
 
   @include media("<=425px") {
