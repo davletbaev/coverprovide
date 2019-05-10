@@ -64,5 +64,6 @@ body.open-sort {
 
   @include media("<768px") {
     overflow-x: hidden;
+    position: static;
   }
 }
