@@ -3,6 +3,15 @@
 {% set title = "Insure SME / Invoice" %}
 
 {% block content %}
+  <section class="section section--first">
+    <nav class="header__container container">
+      {{ breadcrumbs([
+        { label: 'Offer', link: '/table' },
+        { label: 'Invoice №23131' }
+      ]) }}
+    </nav>
+  </section>
+
   <section class="section section--invoice">
     <div class="section__container container">
       <p class="invoice__heading">
