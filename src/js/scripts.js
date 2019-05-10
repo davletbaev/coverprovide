@@ -1,3 +1,5 @@
+let prevScroll;
+
 $(document).ready(() => {
   objectFitImages()
   initSelects()
@@ -9,17 +11,22 @@ $(document).ready(() => {
 
 })
 
+
 function initMobileNav() {
   $('[data-toggle]').on('click', function(e) {
     if ($.modal.isActive()) {
       $(this).toggleClass('toggle--active')
+      $('body').toggleClass('open-modal')
+      window.scrollTo(0, prevScroll)
       $.modal.close()
       return
     }
     
+    prevScroll = window.pageYOffset
+    $('body').toggleClass('open-modal')
     $(this).toggleClass('toggle--active')
-    const target = $(this).data('toggle');
-    $(target).modal();
+    const target = $(this).data('toggle')
+    $(target).modal()
   })
 }
 
@@ -166,8 +173,6 @@ function initSelects() {
     selected.each(function() {
       values.push(this.innerText)
     })
-
-    console.log(valContainer)
 
     valContainer.text(values.join(', '))
   })

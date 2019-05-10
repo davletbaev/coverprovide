@@ -8,31 +8,33 @@
     </button>
 
     <div class="header__collapse" id="modalNav">
-      <ul class="main-nav">
-        <li class="main-nav__item">
-          <a {% if currentPath != '/' %}href="/"{% endif %} class="main-nav__link {% if currentPath == '/' %}main-nav__link--active{% endif %}">Home</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="/table" class="main-nav__link">Get Quotations</a>
-        </li>
-        <li class="main-nav__item">
-          <a {% if currentPath != '/types-of-insur' %}href="/types-of-insur"{% endif %} class="main-nav__link {% if currentPath == '/types-of-insur' %}main-nav__link--active{% endif %}">Types of Insurance</a>
-        </li>
-        <li class="main-nav__item">
-          <a {% if currentPath != '/industries' %}href="/industries"{% endif %} class="main-nav__link {% if currentPath == '/industries' %}main-nav__link--active{% endif %}">Industries</a>
-        </li>
-        <li class="main-nav__item">
-          <a {% if currentPath != '/about' %}href="/about"{% endif %} class="main-nav__link {% if currentPath == '/about' %}main-nav__link--active{% endif %}">About us</a>
-        </li>
-        <li class="main-nav__item">
-          <a {% if currentPath != '/contacts' %}href="/contacts"{% endif %} class="main-nav__link {% if currentPath == '/contacts' %}main-nav__link--active{% endif %}">Contact us</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="/login" class="topbar__item button button--white button--outline">Sign in</a>
-        </li>
-      </ul>
+      <div class="header__collapse-wrap">
+        <ul class="main-nav">
+          <li class="main-nav__item">
+            <a {% if currentPath != '/' %}href="/"{% endif %} class="main-nav__link {% if currentPath == '/' %}main-nav__link--active{% endif %}">Home</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/table" class="main-nav__link">Get Quotations</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if currentPath != '/types-of-insur' %}href="/types-of-insur"{% endif %} class="main-nav__link {% if currentPath == '/types-of-insur' %}main-nav__link--active{% endif %}">Types of Insurance</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if currentPath != '/industries' %}href="/industries"{% endif %} class="main-nav__link {% if currentPath == '/industries' %}main-nav__link--active{% endif %}">Industries</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if currentPath != '/about' %}href="/about"{% endif %} class="main-nav__link {% if currentPath == '/about' %}main-nav__link--active{% endif %}">About us</a>
+          </li>
+          <li class="main-nav__item">
+            <a {% if currentPath != '/contacts' %}href="/contacts"{% endif %} class="main-nav__link {% if currentPath == '/contacts' %}main-nav__link--active{% endif %}">Contact us</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="/login" class="topbar__item button button--white button--outline">Sign in</a>
+          </li>
+        </ul>
 
-      {% include "components/_topbar.html" %}
+        {% include "components/_topbar.html" %}
+      </div>
     </div>
   </nav>
 </header>

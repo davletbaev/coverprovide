@@ -81,6 +81,16 @@
   }
 
   &__collapse {
+    &-wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
+      overflow: auto;
+    }
+
+
     &.modal {
       max-width: none;
       width: 100%;
@@ -88,7 +98,7 @@
       border-radius: 0;
       background-color: #314CAA;
       color: #fff;
-      padding: 20px;
+      padding: 80px 0 0;
 
       a.close-modal {
         display: none;
@@ -128,8 +138,16 @@
   @include media("<768px") {
     top: 0;
 
+    .toggle {
+      margin-left: auto;
+    }
+
     &__collapse {
       display: none;
+
+      .logo {
+        display: inline-block;
+      }
 
       .topbar {
         display: block;
@@ -181,14 +199,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90%;
-    margin: 0 -10px 0 -10px;
+    margin: 20px -10px 20px -10px;
+    flex: 1 0 auto;
+    height: auto;
 
     &__item {
       margin-top: 1em;
       margin-left: -10px;
       margin-bottom: 0.5em;
       font-size: 1.25em;
+
+      &:first-child {
+        margin-top: 0;
+      }
 
       &:last-child {
         display: block;
@@ -202,7 +225,6 @@
 
   @include media("<=375px") {
     align-items: flex-start;
-    margin: 50px 0 0;
 
     &__item {
       font-size: 1em;
@@ -215,5 +237,14 @@
     .button {
       font-size: 1rem;
     }
+  }
+}
+
+
+.open-modal {
+  position: fixed;
+  
+  .header {
+    position: fixed;
   }
 }

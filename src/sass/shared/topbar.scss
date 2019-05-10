@@ -25,8 +25,9 @@
 
   @include media("<768px") {
     display: none;
-    top: auto;
-    bottom: 0;
+    position: static;
+    width: calc(100% + 40px);
+    margin: 0 -20px 0;
 
     &__container {
       justify-content: center;
