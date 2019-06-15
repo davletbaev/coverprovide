@@ -14,11 +14,11 @@ const paths = {
     fonts: 'src/fonts/**/*.{woff,woff2}'
   },
   dist: {
-    html: 'dist',
-    css: 'dist/css',
-    js: 'dist/js',
-    images: 'dist/img',
-    fonts: 'dist/fonts'
+    html: 'docs',
+    css: 'docs/css',
+    js: 'docs/js',
+    images: 'docs/img',
+    fonts: 'docs/fonts'
   }
 }
 
