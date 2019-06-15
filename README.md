@@ -1,8 +1,13 @@
-# Верстка для проекта Insur-Asia
+# Cover Provide
+## Portfolio Case
+
+### Description:
+Cover Provide is a project where I had convert Figma design mockup to HTML and CSS, and then integrate resulting markup with Wordpress.
+I decided to use standard workflow with Gulp. I used Nunjucks and SASS for templating. For scripting I used jQuery.
 
 ## Запуск:
-1. `git clone git@bitbucket.org:apptech-team/insur-asia.git`
+1. `git clone git@github.com:davletbaev/coverprovide.git`
 2. `yarn`
-3. `yarn start` - для разработки
-4. `yarn build` - для билда
+3. `yarn start` - for dev
+4. `yarn build` - for build
 
