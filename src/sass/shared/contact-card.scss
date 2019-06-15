@@ -46,7 +46,7 @@
 
   @include media("retina2x") {
     &__body {
-      background-image: url('img/shared/contact-card__cover@2x.png'), linear-gradient(148.43deg, #3F46E3 23.45%, #69FFD2 138.71%);
+      background-image: url('../img/shared/contact-card__cover@2x.png'), linear-gradient(148.43deg, #3F46E3 23.45%, #69FFD2 138.71%);
     }
   }
 
