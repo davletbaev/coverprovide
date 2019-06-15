@@ -6,7 +6,7 @@ $icons-map: email, lock, error, phone, up, flag, search, search-dark, refresh, r
 @mixin icons {
 	@each $icon in $icons-map {
 		.icon--#{$icon} {
-			background-image: url("/img/icons/#{$icon}.svg");
+			background-image: url("../img/icons/#{$icon}.svg");
     }
   }
 }
